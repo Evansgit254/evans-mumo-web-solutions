@@ -16,6 +16,19 @@ This is the official website for Evans Mumo Web Solutions, a professional fullst
 
 ## Technologies Used
 
+## Screenshots
+
+### Home Page
+![Home Page](images/screenshots/home.png)
+
+### Portfolio
+![Portfolio](images/screenshots/portfolio.png)
+
+### Contact Page
+![Contact Page](images/screenshots/contact.png)
+
+## Technologies Used
+
 - **HTML5**: Semantic structure
 - **Tailwind CSS**: Utility-first styling (via CDN for immediate deployment)
 - **Vanilla JavaScript**: Lightweight interactivity
