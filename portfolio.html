@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio | Evans Mumo Web Solutions</title>
+    <meta name="description"
+        content="Browse our portfolio of successful web development projects. See how we help businesses achieve their digital goals.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3B6F',
+                        accent: '#FF7A00',
+                        light: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-primary">EVANS MUMO <span class="text-accent">WEB
+                                SOLUTIONS</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition">About</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="portfolio.html"
+                        class="text-primary font-semibold hover:text-accent transition">Portfolio</a>
+                    <a href="contact.html"
+                        class="bg-accent text-white px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Get
+                        a Quote</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">About</a>
+                <a href="services.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="portfolio.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50">Portfolio</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-accent font-bold hover:bg-gray-50">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Our Portfolio</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in delay-100">A showcase of our best work and
+                successful client partnerships.</p>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Filters (Visual only for now) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 fade-on-scroll">
+                <button class="bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-md">All</button>
+                <button
+                    class="bg-white text-gray-600 px-6 py-2 rounded-full font-semibold shadow-sm hover:bg-gray-100 transition">Web
+                    Development</button>
+                <button
+                    class="bg-white text-gray-600 px-6 py-2 rounded-full font-semibold shadow-sm hover:bg-gray-100 transition">E-commerce</button>
+                <button
+                    class="bg-white text-gray-600 px-6 py-2 rounded-full font-semibold shadow-sm hover:bg-gray-100 transition">Web
+                    Apps</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift fade-on-scroll">
+                    <div class="relative group">
+                        <img src="images/project1.png" alt="Project Alpha" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <a href="#"
+                                class="text-white border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Project Alpha</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive task management dashboard for enterprise teams.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">React</span>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Node.js</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift fade-on-scroll delay-100">
+                    <div class="relative group">
+                        <img src="images/project2.png" alt="Project Beta" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <a href="#"
+                                class="text-white border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Project Beta</h3>
+                        <p class="text-gray-600 mb-4">Modern e-commerce platform with seamless payment integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-purple-100 text-purple-800 text-xs font-semibold px-2.5 py-0.5 rounded">Next.js</span>
+                            <span
+                                class="bg-indigo-100 text-indigo-800 text-xs font-semibold px-2.5 py-0.5 rounded">Stripe</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift fade-on-scroll delay-200">
+                    <div class="relative group">
+                        <img src="images/project3.png" alt="Project Gamma" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <a href="#"
+                                class="text-white border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Project Gamma</h3>
+                        <p class="text-gray-600 mb-4">High-performance portfolio site for a creative digital agency.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Vue.js</span>
+                            <span
+                                class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded">GSAP</span>
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift fade-on-scroll">
+                    <div class="relative group">
+                        <img src="images/project4.png" alt="Real Estate Portal" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <a href="#"
+                                class="text-white border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Real Estate Portal</h3>
+                        <p class="text-gray-600 mb-4">Property listing platform with advanced search and map
+                            integration.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">React</span>
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Google
+                                Maps API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift fade-on-scroll delay-100">
+                    <div class="relative group">
+                        <img src="images/project5.png" alt="Health & Wellness App" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <a href="#"
+                                class="text-white border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Health & Wellness App</h3>
+                        <p class="text-gray-600 mb-4">Mobile-first web application for tracking fitness and nutrition.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">PWA</span>
+                            <span
+                                class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover-lift fade-on-scroll delay-200">
+                    <div class="relative group">
+                        <img src="images/project6.png" alt="Corporate Intranet" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                            <a href="#"
+                                class="text-white border-2 border-white px-6 py-2 rounded-full font-bold hover:bg-white hover:text-primary transition">View
+                                Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Corporate Intranet</h3>
+                        <p class="text-gray-600 mb-4">Secure internal communication portal for a multinational firm.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded">Angular</span>
+                            <span
+                                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Azure</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 fade-on-scroll">
+            <h2 class="text-3xl font-bold mb-6">Like what you see?</h2>
+            <p class="text-xl text-gray-300 mb-8">Let's create something equally impressive for your business.</p>
+            <a href="contact.html"
+                class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg inline-block">Get
+                a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">EVANS MUMO</h3>
+                    <p class="text-gray-400 mb-6">Professional fullstack web solutions for businesses worldwide.
+                        Quality, speed, and reliability.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-accent transition">Portfolio</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Web
+                                Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">E-commerce</a>
+                        </li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Web
+                                Applications</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">API
+                                Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1.5 mr-3 text-accent"></i>
+                            Nairobi, Kenya</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-accent"></i> +254703840886
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent"></i>
+                            evansdev86@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Evans Mumo Web Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Evans Mumo Web Solutions</title>
+    <meta name="description"
+        content="Explore our comprehensive web development services including fullstack solutions, e-commerce, web apps, and API integration.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3B6F',
+                        accent: '#FF7A00',
+                        light: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-primary">EVANS MUMO <span class="text-accent">WEB
+                                SOLUTIONS</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition">About</a>
+                    <a href="services.html" class="text-primary font-semibold hover:text-accent transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-600 hover:text-primary transition">Portfolio</a>
+                    <a href="contact.html"
+                        class="bg-accent text-white px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Get
+                        a Quote</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">About</a>
+                <a href="services.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50">Services</a>
+                <a href="portfolio.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Portfolio</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-accent font-bold hover:bg-gray-50">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-primary text-white pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Our Services</h1>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in delay-100">Comprehensive digital solutions
+                designed to help your business grow.</p>
+        </div>
+    </header>
+
+    <!-- Services List -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
+
+            <!-- Service 1 -->
+            <div class="flex flex-col md:flex-row gap-12 items-center fade-on-scroll">
+                <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-code text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-primary mb-4">Web Development</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        We build responsive, fast-loading, and SEO-friendly websites using the latest technologies.
+                        Whether you need a simple landing page or a complex corporate site, we ensure your online
+                        presence is professional and effective.
+                    </p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i>
+                            Responsive Design</li>
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i> SEO
+                            Optimization</li>
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i> Fast
+                            Performance</li>
+                    </ul>
+                    <a href="contact.html" class="text-accent font-bold hover:text-orange-600 transition">Start Project
+                        &rarr;</a>
+                </div>
+                <div class="w-full md:w-1/2 order-1 md:order-2">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg transform rotate-2 hover:rotate-0 transition duration-500">
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-6xl text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="flex flex-col md:flex-row gap-12 items-center fade-on-scroll">
+                <div class="w-full md:w-1/2">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg transform -rotate-2 hover:rotate-0 transition duration-500">
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-server text-6xl text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-accent">
+                        <i class="fas fa-layer-group text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-primary mb-4">Fullstack Solutions</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Need a custom solution? Our fullstack capabilities cover both frontend and backend development.
+                        We create robust architectures that scale with your business, handling everything from database
+                        design to user interface.
+                    </p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i> Custom
+                            Database Design</li>
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i> Secure
+                            Authentication</li>
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i>
+                            Scalable Architecture</li>
+                    </ul>
+                    <a href="contact.html" class="text-accent font-bold hover:text-orange-600 transition">Start Project
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="flex flex-col md:flex-row gap-12 items-center fade-on-scroll">
+                <div class="w-full md:w-1/2 order-2 md:order-1">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600">
+                        <i class="fas fa-shopping-cart text-3xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-primary mb-4">E-commerce Development</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Turn visitors into customers with a seamless online shopping experience. We build secure,
+                        easy-to-manage e-commerce platforms with integrated payment gateways and inventory management.
+                    </p>
+                    <ul class="space-y-2 mb-8">
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i>
+                            Payment Gateway Integration</li>
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i>
+                            Product Management</li>
+                        <li class="flex items-center text-gray-600"><i class="fas fa-check text-accent mr-3"></i> Secure
+                            Checkout</li>
+                    </ul>
+                    <a href="contact.html" class="text-accent font-bold hover:text-orange-600 transition">Start Project
+                        &rarr;</a>
+                </div>
+                <div class="w-full md:w-1/2 order-1 md:order-2">
+                    <div
+                        class="bg-white p-6 rounded-xl shadow-lg transform rotate-2 hover:rotate-0 transition duration-500">
+                        <div class="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-store text-6xl text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="max-w-4xl mx-auto px-4 fade-on-scroll">
+            <h2 class="text-3xl font-bold mb-6">Have a specific requirement?</h2>
+            <p class="text-xl text-gray-300 mb-8">We also offer API integration, maintenance packages, and consultation
+                services.</p>
+            <a href="contact.html"
+                class="bg-accent text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition shadow-lg inline-block">Discuss
+                Your Needs</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">EVANS MUMO</h3>
+                    <p class="text-gray-400 mb-6">Professional fullstack web solutions for businesses worldwide.
+                        Quality, speed, and reliability.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-accent transition">Portfolio</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Web
+                                Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">E-commerce</a>
+                        </li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Web
+                                Applications</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">API
+                                Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1.5 mr-3 text-accent"></i>
+                            Nairobi, Kenya</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-accent"></i> +254703840886</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent"></i>
+                            evansdev86@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Evans Mumo Web Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

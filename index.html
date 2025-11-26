@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evans Mumo Web Solutions | Professional Fullstack Development</title>
+    <meta name="description"
+        content="We build fast, reliable, and beautiful websites that drive results. Professional fullstack web solutions for your business.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3B6F',
+                        accent: '#FF7A00',
+                        light: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-bold text-primary">EVANS MUMO <span class="text-accent">WEB
+                                SOLUTIONS</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-primary font-semibold hover:text-accent transition">Home</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary transition">About</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary transition">Services</a>
+                    <a href="portfolio.html" class="text-gray-600 hover:text-primary transition">Portfolio</a>
+                    <a href="contact.html"
+                        class="bg-accent text-white px-5 py-2 rounded-full hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">Get
+                        a Quote</a>
+                </div>
+                <div class="flex items-center md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">About</a>
+                <a href="services.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Services</a>
+                <a href="portfolio.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-primary hover:bg-gray-50">Portfolio</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-accent font-bold hover:bg-gray-50">Get
+                    a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-primary pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <img src="images/hero.png" alt="Background" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-left">
+            <div class="lg:w-2/3">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 animate-fade-in">
+                    Professional Fullstack <br> <span class="text-accent">Web Solutions</span> for Your Business
+                </h1>
+                <p class="text-xl text-gray-200 mb-8 max-w-2xl mx-auto lg:mx-0 animate-fade-in delay-100">
+                    We build fast, reliable, and beautiful websites that drive results. Transform your digital presence
+                    with cutting-edge technology and premium design.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 animate-fade-in delay-200">
+                    <a href="contact.html"
+                        class="bg-accent text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Get Your Free Quote
+                    </a>
+                    <a href="portfolio.html"
+                        class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-primary transition">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Our Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We deliver comprehensive web solutions tailored to
+                    your specific needs.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-lift fade-on-scroll">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6 text-primary">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Web Development</h3>
+                    <p class="text-gray-600 mb-4">Custom websites built with clean code and modern standards for optimal
+                        performance.</p>
+                    <a href="services.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-lift fade-on-scroll delay-100">
+                    <div class="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mb-6 text-accent">
+                        <i class="fas fa-layer-group text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Fullstack Solutions</h3>
+                    <p class="text-gray-600 mb-4">End-to-end development handling both frontend interfaces and backend
+                        logic.</p>
+                    <a href="services.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-lift fade-on-scroll delay-200">
+                    <div
+                        class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6 text-green-600">
+                        <i class="fas fa-shopping-cart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">E-commerce</h3>
+                    <p class="text-gray-600 mb-4">Robust online stores with secure payment gateways and intuitive
+                        product management.</p>
+                    <a href="services.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-md hover-lift fade-on-scroll delay-300">
+                    <div
+                        class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6 text-purple-600">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Web Apps</h3>
+                    <p class="text-gray-600 mb-4">Interactive and scalable web applications that solve complex business
+                        problems.</p>
+                    <a href="services.html" class="text-accent font-semibold hover:underline">Learn More &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Highlight -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 fade-on-scroll">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Featured Projects</h2>
+                    <p class="text-xl text-gray-600">See how we've helped businesses thrive online.</p>
+                </div>
+                <a href="portfolio.html" class="text-accent font-bold text-lg hover:text-orange-600 transition">View All
+                    Projects &rarr;</a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg fade-on-scroll">
+                    <img src="images/project1.png" alt="Project Alpha"
+                        class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold mb-1">Project Alpha</h3>
+                        <p class="text-gray-300 text-sm mb-3">Task Management App</p>
+                        <span class="text-accent font-semibold text-sm">React • Node.js</span>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg fade-on-scroll delay-100">
+                    <img src="images/project2.png" alt="Project Beta"
+                        class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold mb-1">Project Beta</h3>
+                        <p class="text-gray-300 text-sm mb-3">E-commerce Platform</p>
+                        <span class="text-accent font-semibold text-sm">Next.js • Stripe</span>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg fade-on-scroll delay-200">
+                    <img src="images/project3.png" alt="Project Gamma"
+                        class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                        <h3 class="text-white text-xl font-bold mb-1">Project Gamma</h3>
+                        <p class="text-gray-300 text-sm mb-3">Creative Agency Portfolio</p>
+                        <span class="text-accent font-semibold text-sm">Vue.js • GSAP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-on-scroll">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-300">Trusted by businesses across industries.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm fade-on-scroll">
+                    <div class="flex text-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-200 italic mb-6">"Evans Mumo Web Solutions transformed our outdated site into a
+                        modern lead generation machine. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-400">CEO, TechStart</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm fade-on-scroll delay-100">
+                    <div class="flex text-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-200 italic mb-6">"Professional, fast, and incredibly talented. They understood
+                        our vision perfectly and delivered ahead of schedule."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-sm text-gray-400">Founder, GreenLife</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-white/10 p-8 rounded-xl backdrop-blur-sm fade-on-scroll delay-200">
+                    <div class="flex text-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-200 italic mb-6">"The best investment we made this year. Our online sales have
+                        doubled since the new e-commerce launch."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gray-300 rounded-full mr-3"></div>
+                        <div>
+                            <h4 class="font-bold">Emily Davis</h4>
+                            <p class="text-sm text-gray-400">Director, FashionNova</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Ready to Start Your Project?</h2>
+            <p class="text-xl text-gray-600 mb-8">Let's build something amazing together. Contact us today for a free
+                consultation.</p>
+            <a href="contact.html"
+                class="bg-accent text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-orange-600 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1 inline-block">
+                Request a Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">EVANS MUMO</h3>
+                    <p class="text-gray-400 mb-6">Professional fullstack web solutions for businesses worldwide.
+                        Quality, speed, and reliability.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-github text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-accent transition">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-accent transition">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Services</a></li>
+                        <li><a href="portfolio.html" class="text-gray-400 hover:text-accent transition">Portfolio</a>
+                        </li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Web
+                                Development</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">E-commerce</a>
+                        </li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">Web
+                                Applications</a></li>
+                        <li><a href="services.html" class="text-gray-400 hover:text-accent transition">API
+                                Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contact Info</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1.5 mr-3 text-accent"></i>
+                            Nairobi, Kenya</li>
+                        <li class="flex items-center"><i class="fas fa-phone mr-3 text-accent"></i> +254703840886</li>
+                        <li class="flex items-center"><i class="fas fa-envelope mr-3 text-accent"></i>
+                            evansdev86@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2023 Evans Mumo Web Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
