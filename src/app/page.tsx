@@ -40,9 +40,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-              <div className="relative aspect-square rounded-2xl bg-slate-800 border border-white/5 overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-8xl grayscale opacity-20 group-hover:scale-110 transition-transform duration-700">👨‍💻</div>
-                {/* Image placeholder for actual profile photo if needed */}
+              <div className="relative aspect-[3/4] rounded-2xl bg-slate-800 border border-white/5 overflow-hidden">
+                <img
+                  src="/profile.jpg"
+                  alt="Evans Mwendwa Mumo"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                />
                 <div className="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-slate-900 to-transparent">
                   <h4 className="text-xl font-bold">Evans (Mwendwa) Mumo</h4>
                   <p className="text-accent-primary font-mono text-sm">Engineer & Data Scientist</p>
