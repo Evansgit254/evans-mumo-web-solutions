@@ -9,15 +9,15 @@ export default function Hero() {
 
             <div className="container mx-auto px-6 relative z-10 text-center">
                 <h2 className="text-accent-primary font-mono tracking-widest uppercase mb-4 text-sm md:text-base animate-fade-in">
-                    Web Solutions for the Digital Age
+                    Software & Security Engineer
                 </h2>
                 <h1 className="text-5xl md:text-8xl font-bold mb-8 tracking-tight">
                     We Build <br />
-                    <span className="text-gradient glow">Digital Experiences</span>
+                    <span className="text-gradient glow">Secure Digital Experiences</span>
                 </h1>
                 <p className="max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 mb-10 leading-relaxed">
-                    Crafting premium, state-of-the-art websites that turn vision into reality.
-                    Expertise in Next.js, UI/UX, and performance optimization.
+                    Crafting premium, state-of-the-art software solutions with a security-first approach.
+                    Expertise in Python, Java, Django, and Certified Data Science.
                 </p>
 
                 <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
