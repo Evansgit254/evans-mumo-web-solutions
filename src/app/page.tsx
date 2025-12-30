@@ -88,6 +88,7 @@ export default function Home() {
             <a href="#services" className="hover:text-accent-primary">Services</a>
             <a href="#work" className="hover:text-accent-primary">Work</a>
             <a href="#contact" className="hover:text-accent-primary">Contact</a>
+            <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">GitHub</a>
           </nav>
           <div className="text-center text-foreground/40 text-sm">
             <p>&copy; {new Date().getFullYear()} Evans Mumo Web Solutions. All rights reserved.</p>

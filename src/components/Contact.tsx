@@ -67,9 +67,8 @@ export default function Contact() {
                         </div>
 
                         <div className="mt-12 flex gap-4">
-                            <a href="#" className="w-10 h-10 rounded-full glass-morphism flex items-center justify-center hover:bg-accent-primary transition-colors">Li</a>
-                            <a href="#" className="w-10 h-10 rounded-full glass-morphism flex items-center justify-center hover:bg-accent-primary transition-colors">Tw</a>
-                            <a href="#" className="w-10 h-10 rounded-full glass-morphism flex items-center justify-center hover:bg-accent-primary transition-colors">Gh</a>
+                            <a href="https://www.linkedin.com/in/evans-mumo-395960b0/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass-morphism flex items-center justify-center hover:bg-accent-primary transition-colors text-xs font-bold">Li</a>
+                            <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full glass-morphism flex items-center justify-center hover:bg-accent-primary transition-colors text-xs font-bold">Gh</a>
                         </div>
                     </div>
 
