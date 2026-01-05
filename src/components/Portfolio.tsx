@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 export default function Portfolio() {
     const projects = [
@@ -6,19 +7,22 @@ export default function Portfolio() {
             title: "Betting EA System",
             category: "Trading Algorithm",
             image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800",
-            link: "https://github.com/Evansgit254/Betting-Expert-Advisor-System"
+            link: "/projects/trading-bot",
+            external: false
         },
         {
             title: "School Management System",
             category: "Next.js Dashboard",
             image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            link: "https://github.com/Evansgit254/SCHOOL_MANAGEMENT_SYSTEM"
+            link: "https://github.com/Evansgit254/SCHOOL_MANAGEMENT_SYSTEM",
+            external: true
         },
         {
             title: "NRDC Marketplace",
             category: "Full-Stack Web Platform",
             image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            link: "https://github.com/Evansgit254/NRDC"
+            link: "/projects/nrdc-project",
+            external: false
         }
     ];
 
@@ -37,11 +41,11 @@ export default function Portfolio() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {projects.map((project, index) => (
-                        <a
+                        <Link
                             key={index}
                             href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target={project.external ? "_blank" : undefined}
+                            rel={project.external ? "noopener noreferrer" : undefined}
                             className="group relative overflow-hidden rounded-3xl aspect-[4/5] cursor-pointer bg-slate-800 block"
                         >
                             <img
@@ -64,7 +68,7 @@ export default function Portfolio() {
                                     </svg>
                                 </div>
                             </div>
-                        </a>
+                        </Link>
                     ))}
                 </div>
             </div>
