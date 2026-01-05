@@ -70,10 +70,18 @@ export default function Home() {
                   <p className="text-accent-primary text-xl font-bold mb-1">500+</p>
                   <p className="text-xs text-foreground/50 uppercase tracking-wider font-bold">LinkedIn Connections</p>
                 </div>
-                <div className="p-4 rounded-xl bg-white/5 border border-white/5">
-                  <p className="text-accent-primary text-xl font-bold mb-1">Nairobi</p>
-                  <p className="text-xs text-foreground/50 uppercase tracking-wider font-bold">Base Location</p>
-                </div>
+                <Link
+                  href="https://www.linkedin.com/in/evans-mumo-395960b0/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent-primary/50 transition-all flex flex-col justify-center group"
+                >
+                  <p className="text-accent-primary text-xl font-bold mb-1 flex items-center gap-2">
+                    Connect on
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
+                  </p>
+                  <p className="text-xs text-foreground/50 uppercase tracking-wider font-bold group-hover:text-accent-primary transition-colors">LinkedIn Profile</p>
+                </Link>
               </div>
             </div>
           </div>
@@ -93,6 +101,7 @@ export default function Home() {
             <Link href="/blog" className="hover:text-accent-primary">Blog</Link>
             <a href="#contact" className="hover:text-accent-primary">Contact</a>
             <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">GitHub</a>
+            <a href="https://www.linkedin.com/in/evans-mumo-395960b0/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">LinkedIn</a>
           </nav>
           <div className="text-center text-foreground/40 text-sm">
             <p>&copy; {new Date().getFullYear()} Evans Mumo Web Solutions. All rights reserved.</p>
