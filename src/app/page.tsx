@@ -71,7 +71,7 @@ export default function Home() {
                   <p className="text-xs text-foreground/50 uppercase tracking-wider font-bold">LinkedIn Connections</p>
                 </div>
                 <Link
-                  href="https://www.linkedin.com/in/evans-mumo-395960b0/"
+                  href="https://www.linkedin.com/in/evans-mumo-5b0759261"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-4 rounded-xl bg-white/5 border border-white/5 hover:border-accent-primary/50 transition-all flex flex-col justify-center group"
