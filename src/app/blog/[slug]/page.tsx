@@ -31,6 +31,20 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
                 <p>In Forex, milliseconds matter. Optimizing Python code with NumPy and efficient API calls to MetaTrader 5 is critical for maintaining an edge.</p>
             </div>
         )
+    },
+    'ai-in-modern-web-apps': {
+        title: 'The Role of AI in Modern Web Applications',
+        category: 'AI & Data Science',
+        date: 'Dec 28, 2025',
+        content: (
+            <div className="space-y-6">
+                <p>AI is no longer just a buzzword; it's a fundamental shift in how we build user experiences. From predictive modeling to LLM integrations, the possibilities are vast.</p>
+                <h3 className="text-2xl font-bold">Predictive User Interfaces</h3>
+                <p>Imagine an interface that anticipates a user's next action based on historical data. As a Data Scientist, I leverage behavioral patterns to optimize UI components for higher conversion.</p>
+                <h3 className="text-2xl font-bold">LLM Orchestration</h3>
+                <p>Integrating large language models requires careful prompt engineering and secure API handling. Building "agentic" features into web apps is the next frontier of software engineering.</p>
+            </div>
+        )
     }
 };
 
