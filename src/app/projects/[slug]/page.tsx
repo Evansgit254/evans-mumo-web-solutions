@@ -4,11 +4,11 @@ import Link from 'next/link';
 // Dummy data for case studies
 const projects: Record<string, { title: string; subtitle: string; challenge: string; solution: string; stack: string[] }> = {
     'nrdc-project': {
-        title: 'NRDC Data Platform',
-        subtitle: 'Scalable Data Ingestion & Visualization',
-        challenge: 'The Natural Resources Defense Council needed a robust system to handle real-time environmental data ingestion from thousands of sensors, as legacy systems were failing under load.',
-        solution: 'Architected a high-performance Next.js dashboard with a Python/FastAPI backend. Implemented aggressive caching strategies and optimized PostgreSQL queries to reduce load times by 70%.',
-        stack: ['Next.js', 'Python', 'FastAPI', 'PostgreSQL', 'Docker']
+        title: 'NRDC Marketplace',
+        subtitle: 'Full-Stack Web Platform & Resource Hub',
+        challenge: 'The Natural Resources Defense Council required a scalable, secure digital marketplace to manage resources and connect stakeholders effectively across their environmental initiatives.',
+        solution: 'Architected a robust Full-Stack platform using Next.js and TypeScript. Implemented secure authentication flows, role-based access control, and a high-performance database schema to ensure reliability under heavy concurrent usage.',
+        stack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS']
     },
     'trading-bot': {
         title: 'Algorithmic Trading Bot V6.0',
