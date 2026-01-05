@@ -16,6 +16,13 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         challenge: 'Manual trading was susceptible to emotional bias and unable to react to micro-market movements, leading to inconsistent returns in high-volatility environments.',
         solution: 'Developed "Liquid Shield" V6.1 algorithms using Python and MetaTrader 5. The system analyses 50+ technical indicators in real-time, executing trades with sub-second latency and strict risk management rules.',
         stack: ['Python', 'MetaTrader 5', 'Pandas', 'NumPy', 'Technical Analysis']
+    },
+    'school-management-system': {
+        title: 'School Management System',
+        subtitle: 'Comprehensive Educational ERP',
+        challenge: 'Educational institutions struggled with fragmented data, manual fee tracking, and inefficient communication between administration, teachers, and parents.',
+        solution: 'Built a multi-tenant ERP platform using Next.js. Features include automated fee processing, real-time attendance tracking, academic reporting, and a secure parent-teacher communication portal.',
+        stack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma']
     }
 };
 

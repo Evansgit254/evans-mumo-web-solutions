@@ -2,7 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
+import Testimonials from "@/components/Testimonials";
 import Logo from "@/components/Logo";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -79,6 +81,7 @@ export default function Home() {
       </section>
 
       <Portfolio />
+      <Testimonials />
       <Contact />
 
       <footer className="py-24 border-t border-white/5 bg-slate-950">
@@ -87,6 +90,7 @@ export default function Home() {
           <nav className="flex gap-8 mb-12 text-sm text-foreground/60">
             <a href="#services" className="hover:text-accent-primary">Services</a>
             <a href="#work" className="hover:text-accent-primary">Work</a>
+            <Link href="/blog" className="hover:text-accent-primary">Blog</Link>
             <a href="#contact" className="hover:text-accent-primary">Contact</a>
             <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">GitHub</a>
           </nav>

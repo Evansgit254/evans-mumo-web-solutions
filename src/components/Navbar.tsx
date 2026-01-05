@@ -26,9 +26,10 @@ export default function Navbar() {
                 </Link>
 
                 <div className="hidden md:flex space-x-8 items-center">
-                    <Link href="#services" className="hover:text-accent-primary transition-colors">Services</Link>
-                    <Link href="#work" className="hover:text-accent-primary transition-colors">Work</Link>
-                    <Link href="#about" className="hover:text-accent-primary transition-colors">About</Link>
+                    <Link href="/#services" className="hover:text-accent-primary transition-colors">Services</Link>
+                    <Link href="/#work" className="hover:text-accent-primary transition-colors">Work</Link>
+                    <Link href="/#about" className="hover:text-accent-primary transition-colors">About</Link>
+                    <Link href="/blog" className="hover:text-accent-primary transition-colors">Blog</Link>
                     <Link
                         href="#contact"
                         className="px-6 py-2 rounded-full border border-accent-primary text-accent-primary hover:bg-accent-primary hover:text-white transition-all duration-300"

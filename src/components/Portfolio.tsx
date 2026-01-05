@@ -14,8 +14,8 @@ export default function Portfolio() {
             title: "School Management System",
             category: "Next.js Dashboard",
             image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            link: "https://github.com/Evansgit254/SCHOOL_MANAGEMENT_SYSTEM",
-            external: true
+            link: "/projects/school-management-system",
+            external: false
         },
         {
             title: "NRDC Marketplace",
