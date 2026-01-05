@@ -101,7 +101,7 @@ export default function Home() {
             <Link href="/blog" className="hover:text-accent-primary">Blog</Link>
             <a href="#contact" className="hover:text-accent-primary">Contact</a>
             <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">GitHub</a>
-            <a href="https://www.linkedin.com/in/evans-mumo-395960b0/" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/evans-mumo-5b0759261" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">LinkedIn</a>
           </nav>
           <div className="text-center text-foreground/40 text-sm">
             <p>&copy; {new Date().getFullYear()} Evans Mumo Web Solutions. All rights reserved.</p>
