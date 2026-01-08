@@ -13,7 +13,7 @@ export default function Portfolio() {
         {
             title: "TradingExpert System",
             category: "Algorithmic Trading Platform",
-            image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            image: "/images/trading-expert.png",
             link: "/projects/trading-expert",
             external: false
         },
