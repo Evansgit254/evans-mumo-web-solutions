@@ -10,6 +10,13 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         solution: 'Architected a robust Full-Stack platform using Next.js and TypeScript. Implemented secure authentication flows, role-based access control, and a high-performance database schema to ensure reliability under heavy concurrent usage.',
         stack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS']
     },
+    'trading-expert': {
+        title: 'TradingExpert System',
+        subtitle: 'Advanced Automated Trading & Analytics',
+        challenge: 'Traders needed a unified system to handle complex multi-market analysis, incorporating V8.1 logic and real-time execution, which was difficult to achieve with disparate tools.',
+        solution: 'Developed a comprehensive platform integrating Python-based analysis with AI confirmation and precise execution capabilities, ensuring robust performance across various market conditions.',
+        stack: ['Python', 'Pine Script', 'React', 'FastAPI']
+    },
     'trading-bot': {
         title: 'Algorithmic Trading Bot V6.0',
         subtitle: 'Automated Forex Trading System',

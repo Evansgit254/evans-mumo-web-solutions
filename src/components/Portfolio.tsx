@@ -11,6 +11,13 @@ export default function Portfolio() {
             external: false
         },
         {
+            title: "TradingExpert System",
+            category: "Algorithmic Trading Platform",
+            image: "https://images.unsplash.com/photo-1611974765270-ca1258634369?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            link: "/projects/trading-expert",
+            external: false
+        },
+        {
             title: "School Management System",
             category: "Next.js Dashboard",
             image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
