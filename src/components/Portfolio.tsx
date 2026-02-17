@@ -28,8 +28,8 @@ export default function Portfolio() {
             title: "NRDC Marketplace",
             category: "Full-Stack Web Platform",
             image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            link: "/projects/nrdc-project",
-            external: false
+            link: "https://nrdc.africa",
+            external: true
         }
     ];
 

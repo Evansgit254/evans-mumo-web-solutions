@@ -2,13 +2,14 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 // Dummy data for case studies
-const projects: Record<string, { title: string; subtitle: string; challenge: string; solution: string; stack: string[] }> = {
+const projects: Record<string, { title: string; subtitle: string; challenge: string; solution: string; stack: string[]; liveUrl?: string }> = {
     'nrdc-project': {
         title: 'NRDC Marketplace',
         subtitle: 'Full-Stack Web Platform & Resource Hub',
         challenge: 'The Natural Resources Defense Council required a scalable, secure digital marketplace to manage resources and connect stakeholders effectively across their environmental initiatives.',
         solution: 'Architected a robust Full-Stack platform using Next.js and TypeScript. Implemented secure authentication flows, role-based access control, and a high-performance database schema to ensure reliability under heavy concurrent usage.',
-        stack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS']
+        stack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
+        liveUrl: 'https://nrdc.africa'
     },
     'trading-expert': {
         title: 'TradingExpert System',
