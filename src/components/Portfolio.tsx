@@ -14,8 +14,8 @@ export default function Portfolio() {
             title: "TradingExpert System",
             category: "Algorithmic Trading Platform",
             image: "/images/trading-expert.png",
-            link: "/projects/trading-expert",
-            external: false
+            link: "https://github.com/Evansgit254/evans-mumo-web-solutions.git",
+            external: true
         },
         {
             title: "School Management System",

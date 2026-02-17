@@ -16,7 +16,8 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         subtitle: 'Advanced Automated Trading & Analytics',
         challenge: 'Traders needed a unified system to handle complex multi-market analysis, incorporating V8.1 logic and real-time execution, which was difficult to achieve with disparate tools.',
         solution: 'Developed a comprehensive platform integrating Python-based analysis with AI confirmation and precise execution capabilities, ensuring robust performance across various market conditions.',
-        stack: ['Python', 'Pine Script', 'React', 'FastAPI']
+        stack: ['Python', 'Pine Script', 'React', 'FastAPI'],
+        liveUrl: 'https://github.com/Evansgit254/evans-mumo-web-solutions.git'
     },
     'trading-bot': {
         title: 'Algorithmic Trading Bot V6.0',
