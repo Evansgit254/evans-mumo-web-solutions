@@ -14,7 +14,7 @@ export default function Portfolio() {
             title: "TradingExpert System",
             category: "Algorithmic Trading Platform",
             image: "/images/trading-expert.png",
-            link: "https://github.com/Evansgit254/evans-mumo-web-solutions.git",
+            link: "http://34.77.4.35:5000/",
             external: true
         },
         {
