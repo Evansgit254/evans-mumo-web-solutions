@@ -1,84 +1,114 @@
 "use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Portfolio() {
     const projects = [
         {
             title: "Betting EA System",
             category: "Trading Algorithm",
+            tags: ["Python", "MT5", "Data Science"],
             image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800",
-            link: "/projects/trading-bot",
+            slug: "trading-bot",
             external: false
         },
         {
             title: "TradingExpert System",
             category: "Algorithmic Trading Platform",
+            tags: ["React", "FastAPI", "PostgreSQL"],
             image: "/images/trading-expert.png",
-            link: "http://34.77.4.35:5000/",
-            external: true
+            slug: "trading-expert",
+            external: false
         },
         {
             title: "School Management System",
             category: "Next.js Dashboard",
+            tags: ["Next.js", "TypeScript", "Prisma"],
             image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            link: "/projects/school-management-system",
+            slug: "school-management-system",
             external: false
         },
         {
             title: "NRDC Marketplace",
             category: "Full-Stack Web Platform",
+            tags: ["Django", "React", "AWS"],
             image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            link: "https://nrdc.africa",
-            external: true
+            slug: "nrdc-project",
+            external: false
         }
     ];
 
     return (
-        <section id="work" className="py-24 bg-background">
-            <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-center md:text-left">
-                    <div>
-                        <h2 className="text-accent-primary font-mono tracking-widest uppercase mb-4 text-sm">Case Studies</h2>
-                        <h3 className="text-4xl md:text-5xl font-bold">Selected Works</h3>
-                    </div>
-                    <p className="max-w-md text-foreground/60">
-                        A showcase of our latest digital products and web solutions designed to solve complex problems.
-                    </p>
+        <section id="work" className="py-32 bg-background relative overflow-hidden border-b border-white/5">
+            <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+            
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-primary/10 text-accent-primary mb-6 text-sm font-medium border border-accent-primary/20">
+                            Featured Work
+                        </div>
+                        <h3 className="text-5xl md:text-6xl font-black tracking-tight">Selected <span className="text-gradient">Projects</span></h3>
+                    </motion.div>
+                    <motion.p 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        className="max-w-md text-foreground/60 text-lg font-light leading-relaxed text-balance"
+                    >
+                        A showcase of resilient digital products and premium engineering solutions.
+                    </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.map((project, index) => (
-                        <Link
-                            key={index}
-                            href={project.link}
-                            target={project.external ? "_blank" : undefined}
-                            rel={project.external ? "noopener noreferrer" : undefined}
-                            className="group relative overflow-hidden rounded-3xl aspect-[4/5] cursor-pointer bg-slate-800 block"
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    {projects.map((project, idx) => (
+                        <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: idx * 0.1 }}
+                            whileHover={{ y: -8 }}
+                            className="group relative"
                         >
-                            <img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
-                                loading="lazy"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-300"></div>
-
-                            <div className="absolute bottom-0 left-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                <span className="text-accent-primary text-sm font-semibold mb-2 block opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100 underline decoration-2 underline-offset-4">
-                                    {project.category}
-                                </span>
-                                <h4 className="text-2xl font-bold text-white mb-4">{project.title}</h4>
-                                <div className="inline-flex items-center gap-2 text-white font-semibold group/link">
-                                    View Project
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover/link:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                    </svg>
+                            <div className="relative aspect-[16/10] overflow-hidden glass-morphism rounded-[2.5rem] shadow-2xl">
+                                <motion.img
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
+                                
+                                <div className="absolute inset-x-0 bottom-0 p-10 translate-y-4 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 flex justify-between items-end">
+                                    <div className="flex flex-col gap-2">
+                                        <p className="text-accent-primary text-[10px] font-black uppercase tracking-[0.3em] mb-1">{project.category}</p>
+                                        <h4 className="text-3xl font-black text-white tracking-tighter">{project.title}</h4>
+                                    </div>
+                                    <Link 
+                                        href={`/projects/${project.slug}`} 
+                                        className="px-6 py-2.5 rounded-2xl bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-accent-primary transition-all"
+                                    >
+                                        View Case Study
+                                    </Link>
                                 </div>
                             </div>
-                        </Link>
+                            
+                            <div className="mt-8 px-4 flex flex-wrap gap-2">
+                                {project.tags.map(tag => (
+                                    <span key={tag} className="text-[10px] px-3 py-1 rounded-full border border-white/5 bg-white/5 text-foreground/50">{tag}</span>
+                                ))}
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>
         </section>
     );
 }
+

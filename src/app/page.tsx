@@ -1,10 +1,8 @@
 "use client";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
-import Logo from "@/components/Logo";
 import TechStack from "@/components/TechStack";
 import Link from "next/link";
 import { motion, useScroll, useSpring } from "framer-motion";
@@ -18,152 +16,170 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen bg-background">
-      <motion.div
-        className="fixed top-0 left-0 right-0 h-1 bg-accent-primary z-[60] origin-left"
-        style={{ scaleX }}
-      />
-      <Navbar />
+    <main className="min-h-screen">
       <Hero />
 
-      <section id="services" className="py-24 bg-slate-900/40 relative overflow-hidden">
-        <div className="absolute inset-0 bg-accent-primary/5 blur-[120px] pointer-events-none rounded-full w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+      <section id="services" className="py-32 bg-background relative overflow-hidden border-b border-white/5">
+        <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+        
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            viewport={{ once: true, amount: 0.1 }}
+            className="text-center mb-24"
           >
-            <h2 className="text-accent-primary font-mono tracking-widest uppercase mb-4 text-sm">Expertise</h2>
-            <h3 className="text-4xl md:text-5xl font-bold mb-4">Core Solutions</h3>
-            <p className="text-foreground/60 max-w-xl mx-auto">Providing world-class engineering and data science services with precision.</p>
+            <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-accent-primary/10 text-accent-primary mb-6 text-sm font-medium">
+              <span className="w-2 h-2 rounded-full bg-accent-primary animate-pulse"></span>
+              Core Services
+            </div>
+            <h3 className="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-[1.1]">What I <span className="text-gradient">Do</span> Best</h3>
+            <p className="text-foreground/60 max-w-2xl mx-auto text-xl font-light leading-relaxed">Building high-performance software and data solutions with a focus on user experience, security, and scale.</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-2 gap-6 h-auto md:h-[600px]">
-            {/* Bento Card 1: Main Service */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="md:col-span-3 md:row-span-2 p-10 rounded-[2.5rem] glass-morphism group flex flex-col justify-end relative overflow-hidden border-accent-primary/20"
-            >
-              <div className="absolute top-10 right-10 text-6xl opacity-20 group-hover:opacity-40 transition-opacity">⚙️</div>
-              <h4 className="text-3xl font-bold mb-4">Software Engineering</h4>
-              <p className="text-foreground/70 leading-relaxed text-lg max-w-md">
-                We design and build high-performance backend systems and scalable web applications. Our engineering
-                philosophy centers on maintainable, efficient, and robust code.
-              </p>
-              <div className="mt-8 flex gap-3">
-                <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-mono">Django</span>
-                <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-mono">Next.js</span>
-                <span className="px-3 py-1 bg-white/5 border border-white/5 rounded-full text-xs font-mono">Spring Boot</span>
-              </div>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+              {/* Bento Card 1: Software Engineering */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                className="md:col-span-8 p-12 glass-morphism rounded-[3rem] group relative overflow-hidden flex flex-col justify-between min-h-[500px]"
+              >
+                  <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[120px] rounded-full group-hover:bg-accent-primary/15 transition-all duration-1000 pointer-events-none"></div>
+                  <div className="relative z-10">
+                      <div className="w-20 h-20 rounded-3xl flex items-center justify-center text-accent-primary mb-12 group-hover:scale-110 group-hover:rotate-3 transition-all duration-700 bg-accent-primary/10 shadow-inner">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                      </div>
+                      <h4 className="text-5xl font-black mb-8 tracking-tighter leading-none">Software <br/>Engineering</h4>
+                      <p className="text-foreground/70 leading-relaxed text-2xl font-light max-w-2xl">
+                          I design and build high-performance distributed systems. My engineering philosophy centers on resilience and code as a craft.
+                      </p>
+                  </div>
+                  <div className="relative z-10 mt-12 flex flex-wrap gap-4 text-sm font-bold uppercase tracking-widest text-foreground/40">
+                      <span className="px-6 py-2 rounded-2xl bg-white/5 border border-white/5 group-hover:text-accent-primary transition-colors">Distributed Systems</span>
+                      <span className="px-6 py-2 rounded-2xl bg-white/5 border border-white/5 group-hover:text-accent-primary transition-colors">Cloud Native</span>
+                      <span className="px-6 py-2 rounded-2xl bg-white/5 border border-white/5 group-hover:text-accent-primary transition-colors">DevOps</span>
+                  </div>
+              </motion.div>
 
-            {/* Bento Card 2: Security */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="md:col-span-3 md:row-span-1 p-8 rounded-[2.5rem] glass-morphism group flex flex-col justify-center relative overflow-hidden border-accent-secondary/20"
-            >
-              <div className="absolute top-8 right-8 text-4xl opacity-20 group-hover:opacity-40 transition-opacity">🛡️</div>
-              <h4 className="text-2xl font-bold mb-3">Security Engineering</h4>
-              <p className="text-foreground/70 leading-relaxed">
-                Security-first methodology applied to every layer of the software development lifecycle.
-              </p>
-            </motion.div>
+              {/* Bento Card 2: Security */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ delay: 0.1 }}
+                whileHover={{ y: -8 }}
+                className="md:col-span-4 p-12 glass-morphism rounded-[3rem] group relative overflow-hidden flex flex-col justify-between"
+              >
+                  <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-secondary/5 blur-[100px] rounded-full group-hover:bg-accent-secondary/15 transition-all duration-1000 pointer-events-none"></div>
+                  <div className="relative z-10">
+                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-accent-secondary mb-12 group-hover:scale-110 transition-all duration-700 bg-accent-secondary/10 shadow-inner">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      </div>
+                      <h4 className="text-4xl font-black mb-8 tracking-tighter leading-tight">Security<br/>Systems</h4>
+                      <p className="text-foreground/60 leading-relaxed text-xl font-light">
+                          Security-first methodology integrated into every layer of the SDLC.
+                      </p>
+                  </div>
+              </motion.div>
 
-            {/* Bento Card 3: AI */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="md:col-span-3 md:row-span-1 p-8 rounded-[2.5rem] bg-accent-primary text-black group flex flex-col justify-center relative overflow-hidden"
-            >
-              <div className="absolute top-8 right-8 text-4xl opacity-20">🧠</div>
-              <h4 className="text-2xl font-bold mb-3">AI & Data Science</h4>
-              <p className="text-black/80 leading-relaxed">
-                Harnessing the power of data through advanced predictive modeling and intelligent automation.
-              </p>
-            </motion.div>
-          </div>
+              {/* Bento Card 3: AI & Data Science */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ delay: 0.2 }}
+                className="md:col-span-12 p-16 glass-morphism rounded-[3rem] group relative overflow-hidden flex flex-col items-center justify-center text-center py-24"
+              >
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-accent-secondary/5 to-transparent opacity-50"></div>
+                  <div className="relative z-10 max-w-4xl">
+                      <div className="w-24 h-24 mx-auto rounded-[2.5rem] bg-white/10 flex items-center justify-center text-white mb-12 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-700 shadow-2xl backdrop-blur-2xl border border-white/20">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                      </div>
+                      <h4 className="text-6xl font-black mb-8 tracking-tighter">AI & Advanced Analytics</h4>
+                      <p className="text-foreground/80 leading-relaxed text-3xl font-extralight mb-12">
+                          Harnessing biological-inspired computing to derive intelligent insights from complex data.
+                      </p>
+                      <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                          <Link href="#contact" className="px-12 py-5 rounded-full bg-white text-black text-sm font-black uppercase tracking-widest shadow-2xl hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.3)] transition-all inline-block">Discuss a Project</Link>
+                      </motion.div>
+                  </div>
+              </motion.div>
+            </div>
         </div>
       </section>
 
       <TechStack />
 
-      <section id="about" className="py-24 bg-background relative overflow-hidden">
+      <section id="about" className="py-32 bg-background relative overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="relative group"
+              className="relative group h-full"
             >
-              <div className="absolute -inset-4 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 rounded-[3rem] blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
-              <div className="relative aspect-[4/5] rounded-[2.5rem] bg-slate-800 border border-white/5 overflow-hidden ring-1 ring-white/10">
+              <div className="absolute -inset-4 bg-gradient-to-r from-accent-primary/20 to-accent-secondary/20 blur-[50px] group-hover:blur-[70px] transition-all duration-1000"></div>
+              <div className="relative aspect-[4/5] bg-white/5 border border-white/10 rounded-3xl overflow-hidden shadow-2xl group-hover:shadow-[0_0_40px_rgba(255,255,255,0.1)] transition-all duration-700">
                 <img
                   src="/profile.jpg"
                   alt="Evans Mwendwa Mumo"
-                  className="w-full h-full object-cover grayscale brightness-90 hover:grayscale-0 hover:brightness-100 transition-all duration-1000"
+                  className="w-full h-full object-cover transition-all duration-1000 scale-105 group-hover:scale-100"
                 />
-                <div className="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-slate-950 via-slate-900/60 to-transparent">
-                  <h4 className="text-2xl font-bold mb-1">Evans Mumo</h4>
-                  <p className="text-accent-primary font-mono text-sm tracking-widest flex items-center gap-2">
-                    <span className="w-8 h-[1px] bg-accent-primary"></span>
-                    ENGINEER & DATA SCIENTIST
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90"></div>
+                
+                <div className="absolute inset-x-0 bottom-0 p-10 md:p-12">
+                  <h4 className="text-3xl font-black mb-2 tracking-tight text-foreground italic uppercase">Mumo<span className="text-accent-primary">Forge</span></h4>
+                  <p className="text-accent-primary text-sm font-medium flex items-center gap-3 uppercase tracking-widest">
+                    <span className="w-8 h-[2px] bg-accent-primary rounded-full"></span>
+                    Principal Engineer
                   </p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
+              className="space-y-10"
             >
-              <h2 className="text-accent-primary font-mono tracking-widest uppercase mb-4 text-sm tracking-[0.3em]">Origins</h2>
-              <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">Engineering Excellence with a Focus on Security</h3>
-              <p className="text-foreground/70 leading-relaxed mb-6 text-xl font-light italic">
-                "I bridge the gap between complex network architectures and modern software development."
-              </p>
-              <div className="space-y-6 text-foreground/70 leading-relaxed mb-10">
-                <p>
-                  I am a dedicated **Software & Security Engineer** and **Certified Data Scientist** with a passion for building secure, efficient, and intelligent digital systems.
-                </p>
-                <p>
-                  Holding a degree in **Telecommunications & IT Engineering** from **Kenyatta University**, my expertise spans Django, Python, Java, and DevOps. I ensure that every project is not just functional, but resilient and future-ready.
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-secondary/10 text-accent-secondary mb-6 text-xs font-medium border border-accent-secondary/20">
+                  Origins
+                </div>
+                <h3 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tight">
+                  Engineering <br/> <span className="text-gradient">Resilience</span>
+                </h3>
+                <p className="text-foreground/60 text-2xl font-light italic leading-relaxed">
+                  "Building systems that don't just work—they endure."
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-6">
+              <div className="space-y-6 text-foreground/50 text-xl font-light leading-relaxed">
+                <p>
+                  <strong className="text-foreground tracking-tight font-medium">Mumo Forge</strong> is an elite software engineering and security studio led by <strong className="text-foreground tracking-tight font-medium">Evans Mumo</strong>.
+                </p>
+                <p>
+                  With a foundation in <strong className="text-foreground tracking-tight">Telecommunications Engineering</strong> and advanced <strong className="text-foreground tracking-tight">Data Science</strong>, we bridge the gap between rigorous infrastructure and powerful digital experiences.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-6 mt-8">
                 <motion.div
-                  whileHover={{ y: -5 }}
-                  className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all"
+                  whileHover={{ y: -4 }}
+                  className="p-8 bg-white/5 border border-white/10 rounded-3xl group relative overflow-hidden transition-all hover:bg-white/10 shadow-lg"
                 >
-                  <p className="text-accent-primary text-2xl font-bold mb-1">500+</p>
-                  <p className="text-[10px] text-foreground/40 uppercase tracking-widest font-bold">Connections</p>
+                  <p className="text-accent-primary text-5xl font-black mb-3 tracking-tighter">10+</p>
+                  <p className="text-sm text-foreground/60 font-medium">Core Projects Built</p>
                 </motion.div>
                 <motion.div
-                  whileHover={{ y: -5 }}
-                  className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-accent-primary/40 transition-all group flex flex-col justify-center"
+                  whileHover={{ y: -4 }}
+                  className="p-8 bg-white/5 border border-white/10 rounded-3xl group relative overflow-hidden transition-all hover:bg-white/10 shadow-lg"
                 >
-                  <Link
-                    href="https://www.linkedin.com/in/evans-mumo-5b0759261"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <p className="text-accent-primary text-xl font-bold mb-1 flex items-center gap-2 group-hover:scale-105 transition-transform">
-                      LinkedIn
-                      <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></svg>
-                    </p>
-                    <p className="text-[10px] text-foreground/40 uppercase tracking-widest font-bold group-hover:text-accent-primary transition-colors">Portfolio Profile</p>
-                  </Link>
+                  <p className="text-accent-secondary text-5xl font-black mb-3 tracking-tighter">Sec+</p>
+                  <p className="text-sm text-foreground/60 font-medium">Security Validation</p>
                 </motion.div>
               </div>
             </motion.div>
@@ -174,33 +190,8 @@ export default function Home() {
       <Portfolio />
       <Testimonials />
       <Contact />
-
-      <footer className="py-24 border-t border-white/5 bg-slate-950">
-        <div className="container mx-auto px-6 flex flex-col items-center">
-          <Logo className="mb-8" />
-          <nav className="flex gap-8 mb-12 text-sm text-foreground/60">
-            <a href="#services" className="hover:text-accent-primary">Services</a>
-            <a href="#work" className="hover:text-accent-primary">Work</a>
-            <Link href="/blog" className="hover:text-accent-primary">Blog</Link>
-            <a href="#contact" className="hover:text-accent-primary">Contact</a>
-            <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">GitHub</a>
-            <a href="https://www.linkedin.com/in/evans-mumo-5b0759261" target="_blank" rel="noopener noreferrer" className="hover:text-accent-primary">LinkedIn</a>
-          </nav>
-          <div className="text-center text-foreground/40 text-sm">
-            <p>&copy; {new Date().getFullYear()} Evans Mumo Web Solutions. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }
 
-function ServiceCard({ title, description, icon }: { title: string, description: string, icon: string }) {
-  return (
-    <div className="p-8 rounded-[2rem] glass-morphism hover:border-accent-primary/50 transition-all duration-300 group cursor-default">
-      <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 inline-block drop-shadow-lg">{icon}</div>
-      <h4 className="text-2xl font-bold mb-4">{title}</h4>
-      <p className="text-foreground/70 leading-relaxed">{description}</p>
-    </div>
-  );
-}
+

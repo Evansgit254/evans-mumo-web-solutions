@@ -35,6 +35,11 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         stack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma']
     }
 };
+export async function generateStaticParams() {
+    return Object.keys(projects).map((slug) => ({
+        slug: slug,
+    }));
+}
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params;

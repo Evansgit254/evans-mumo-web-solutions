@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,22 +16,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Evans Mumo - Software & Security Engineer",
-  description: "Portfolio of Evans Mumo, a Software & Security Engineer specializing in robust backend systems, secure SDLC, and AI solutions.",
-  keywords: ["Software Engineer", "Security Engineer", "Data Scientist", "Evans Mumo", "Portfolio", "Web Development", "Next.js", "Cybersecurity", "AI"],
+  title: "Mumo Forge - Software & Security Engineering",
+  description: "Boutique software engineering and security studio specialized in robust backend systems and AI solutions.",
+  keywords: ["Mumo Forge", "Software Engineering", "Security Engineering", "Data Science", "Evans Mumo"],
   openGraph: {
-    title: "Evans Mumo - Software & Security Engineer",
-    description: "Building secure, efficient, and intelligent digital systems.",
-    url: "https://evansmumo.com", // Replace with actual URL if known, or generic
-    siteName: "Evans Mumo Portfolio",
+    title: "Mumo Forge - Software & Security Engineering",
+    description: "Forging secure, efficient, and intelligent digital systems.",
+    url: "https://mumoforge.com",
+    siteName: "Mumo Forge Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Evans Mumo - Software & Security Engineer",
-    description: "Building secure, efficient, and intelligent digital systems.",
-    creator: "@EvansMumo", // diligent placeholder
+    title: "Mumo Forge - Software & Security Engineering",
+    description: "Forging secure, efficient, and intelligent digital systems.",
+    creator: "@EvansMumo",
   },
 };
 
@@ -39,13 +41,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground selection:bg-accent-primary/30 selection:text-white`}
       >
+
+        <Navbar />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>
   );
 }
+
