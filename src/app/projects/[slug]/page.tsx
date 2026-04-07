@@ -20,13 +20,7 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         liveUrl: 'http://34.77.4.35:5000/',
         githubUrl: 'https://github.com/Evansgit254/smc-scalp-signals.git'
     },
-    'trading-bot': {
-        title: 'Algorithmic Trading Bot V6.0',
-        subtitle: 'Automated Forex Trading System',
-        challenge: 'Manual trading was susceptible to emotional bias and unable to react to micro-market movements, leading to inconsistent returns in high-volatility environments.',
-        solution: 'Developed "Liquid Shield" V6.1 algorithms using Python and MetaTrader 5. The system analyses 50+ technical indicators in real-time, executing trades with sub-second latency and strict risk management rules.',
-        stack: ['Python', 'MetaTrader 5', 'Pandas', 'NumPy', 'Technical Analysis']
-    },
+
     'school-management-system': {
         title: 'School Management System',
         subtitle: 'Comprehensive Educational ERP',

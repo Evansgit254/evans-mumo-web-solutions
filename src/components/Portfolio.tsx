@@ -4,14 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Portfolio() {
     const projects = [
-        {
-            title: "Betting EA System",
-            category: "Trading Algorithm",
-            tags: ["Python", "MT5", "Data Science"],
-            image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=800",
-            slug: "trading-bot",
-            external: false
-        },
+
         {
             title: "TradingExpert System",
             category: "Algorithmic Trading Platform",
