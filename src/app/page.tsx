@@ -130,7 +130,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-90"></div>
                 
                 <div className="absolute inset-x-0 bottom-0 p-10 md:p-12">
-                  <h4 className="text-3xl font-black mb-2 tracking-tight text-foreground italic uppercase">Mumo<span className="text-accent-primary">Forge</span></h4>
+                  <h4 className="text-3xl font-black mb-2 tracking-tight text-foreground italic uppercase">Mumo<span className="text-accent-primary">Syntax&Capital</span></h4>
                   <p className="text-accent-primary text-sm font-medium flex items-center gap-3 uppercase tracking-widest">
                     <span className="w-8 h-[2px] bg-accent-primary rounded-full"></span>
                     Principal Engineer
@@ -159,7 +159,7 @@ export default function Home() {
 
               <div className="space-y-6 text-foreground/50 text-xl font-light leading-relaxed">
                 <p>
-                  <strong className="text-foreground tracking-tight font-medium">Mumo Forge</strong> is an elite software engineering and security studio led by <strong className="text-foreground tracking-tight font-medium">Evans Mumo</strong>.
+                  <strong className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</strong> is an elite quantitative engineering and full-stack studio led by <strong className="text-foreground tracking-tight font-medium">Evans Mumo</strong>.
                 </p>
                 <p>
                   With a foundation in <strong className="text-foreground tracking-tight">Telecommunications Engineering</strong> and advanced <strong className="text-foreground tracking-tight">Data Science</strong>, we bridge the gap between rigorous infrastructure and powerful digital experiences.

@@ -49,10 +49,10 @@ export default function Logo({ className = "" }: { className?: string }) {
 
             <div className="flex flex-col leading-none">
                 <span className="text-xl font-black tracking-tighter text-white uppercase italic">
-                    MUMO<span className="text-accent-primary">FORGE</span>
+                    MUMO<span className="text-accent-primary">SYNTAX</span>
                 </span>
                 <span className="text-[9px] tracking-[0.4em] font-mono text-foreground/40 font-bold uppercase mt-1">
-                    Software & Security
+                    & CAPITAL ENGINEERING
                 </span>
             </div>
         </div>

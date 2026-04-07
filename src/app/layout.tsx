@@ -16,21 +16,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mumo Forge - Software & Security Engineering",
-  description: "Boutique software engineering and security studio specialized in robust backend systems and AI solutions.",
-  keywords: ["Mumo Forge", "Software Engineering", "Security Engineering", "Data Science", "Evans Mumo"],
+  title: "Mumo Syntax & Capital | Engineering & Algorithmic Trading",
+  description: "Specialized engineering studio focusing on high-frequency algorithms, resilient web systems, and data-driven solutions.",
+  keywords: ["Mumo Syntax & Capital", "Quantitative Engineering", "Algorithmic Trading", "Full-Stack Development", "Evans Mumo"],
   openGraph: {
-    title: "Mumo Forge - Software & Security Engineering",
-    description: "Forging secure, efficient, and intelligent digital systems.",
-    url: "https://mumoforge.com",
-    siteName: "Mumo Forge Portfolio",
+    title: "Mumo Syntax & Capital",
+    description: "Architecting high-performance algorithms and resilient web solutions.",
+    url: "https://mumosyntaxcapital.com",
+    siteName: "Mumo Syntax & Capital Portfolio",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mumo Forge - Software & Security Engineering",
-    description: "Forging secure, efficient, and intelligent digital systems.",
+    title: "Mumo Syntax & Capital",
+    description: "Architecting high-performance algorithms and resilient web solutions.",
     creator: "@EvansMumo",
   },
 };

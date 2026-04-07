@@ -78,7 +78,7 @@ export default function Hero() {
                 </h1>
                 
                 <p className="text-lg md:text-2xl text-foreground/60 mb-14 max-w-2xl mx-auto font-light leading-relaxed text-balance">
-                    At <span className="text-foreground tracking-tight font-medium">Mumo Forge</span>, we engineer high-performance software and secure digital infrastructure. 
+                    At <span className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</span>, we architect high-frequency algorithms and resilient web systems. 
                     Specialized in <span className="text-foreground/90 font-medium">Distributed Systems</span> and <span className="text-foreground/90 font-medium">Intelligent Analytics</span>.
                 </p>
 
