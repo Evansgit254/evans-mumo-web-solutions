@@ -51,61 +51,27 @@ export default function Hero() {
     }, []);
 
     return (
-        <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background">
+        <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background bg-blueprint">
             {/* Background elements follow */}
             
-            {/* Data Stream Background */}
-            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-[0.03]">
-                <div className="absolute inset-0 flex flex-wrap gap-4 text-[10px] font-mono leading-none select-none break-all">
-                    {Array.from({ length: 20 }).map((_, i) => (
-                        <motion.div
-                            key={i}
-                            animate={{ y: ["0%", "-100%"] }}
-                            transition={{ 
-                                duration: 20 + Math.random() * 30, 
-                                repeat: Infinity, 
-                                ease: "linear",
-                                delay: -Math.random() * 20
-                            }}
-                            className="whitespace-nowrap"
-                        >
-                            {Array.from({ length: 100 }).map((_, j) => (
-                                <div key={j} className="mb-2">
-                                    {Math.random() > 0.5 ? "0x" + Math.floor(Math.random() * 0xFFFFFF).toString(16) : "SIG_" + Math.floor(Math.random() * 1000)}
-                                    &nbsp;{Math.random() > 0.5 ? "+" : "-"}{(Math.random() * 10).toFixed(2)}%
-                                </div>
-                            ))}
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-
-            {/* Scanning Line */}
-            <motion.div 
-                animate={{ y: ["-100%", "200%"] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-x-0 h-[2px] bg-accent-primary/20 blur-[2px] z-10 pointer-events-none"
-            />
-            
             <div className="absolute top-24 right-6 md:right-12 z-30 hidden md:block">
-                <div className="cyber-panel p-4 text-[10px] font-mono space-y-2 w-48 bg-background/80">
-                    <div className="flex justify-between items-center text-accent-primary border-b border-accent-primary/20 pb-1 mb-2">
-                        <span>SYSTEM_HUD</span>
-                        <span className="animate-pulse">●</span>
+                <div className="cyber-panel p-4 text-[10px] font-mono space-y-2 w-48 bg-background/50 border-accent-primary/10">
+                    <div className="flex justify-between items-center text-accent-primary border-b border-accent-primary/10 pb-1 mb-2">
+                        <span>DATA_CORE_HUD</span>
                     </div>
                     <div className="flex justify-between">
-                        <span className="text-foreground/40">LOAD_AVG</span>
+                        <span className="text-foreground/30">CPU</span>
                         <span className="text-foreground">{systemStats.load}%</span>
                     </div>
                     <div className="flex justify-between">
-                        <span className="text-foreground/40">UPTIME</span>
-                        <span className="text-foreground">{systemStats.uptime}</span>
+                        <span className="text-foreground/30">RUNTIME</span>
+                        <span className="text-foreground">STABLE</span>
                     </div>
                     <div className="flex justify-between">
-                        <span className="text-foreground/40">STATE</span>
-                        <span className="text-accent-primary">{systemStats.status}</span>
+                        <span className="text-foreground/30">NETWORK</span>
+                        <span className="text-accent-primary">ACTIVE</span>
                     </div>
-                    <div className="mt-2 h-1 w-full bg-white/5 overflow-hidden">
+                    <div className="mt-2 h-[2px] w-full bg-accent-primary/10 overflow-hidden">
                         <motion.div 
                             animate={{ width: ["10%", "90%", "30%", "60%"] }}
                             transition={{ duration: 5, repeat: Infinity }}
@@ -119,20 +85,19 @@ export default function Hero() {
                 className="container-hero mx-auto px-6 relative z-20 text-center"
             >
                 <div className="inline-block mb-10">
-                    <div className="flex items-center gap-3 px-6 py-2.5 cyber-panel">
+                    <div className="flex items-center gap-3 px-6 py-2.5 cyber-panel border-accent-primary/20 bg-background/50">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full bg-accent-primary opacity-75"></span>
                             <span className="relative inline-flex h-2 w-2 bg-accent-primary"></span>
                         </span>
                         <h2 className="text-accent-primary font-mono text-sm tracking-widest uppercase">
-                            System_Online // Ready
+                            Operational_Core // v4.0
                         </h2>
                     </div>
                 </div>
                 
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[1.1] text-balance text-white transform-gpu uppercase font-mono header-jitter phosphor-glow-green">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[1.1] text-balance text-white transform-gpu uppercase font-mono">
                     Forging <br className="hidden md:block"/>
-                    <span className="text-foreground">Digital Resilience</span><span className="text-accent-primary animate-blink">_</span>
+                    <span className="text-foreground">Digital Resilience</span><span className="text-accent-primary">_</span>
                 </h1>
                 
                 <p className="text-lg md:text-2xl text-dim-primary mb-14 max-w-2xl mx-auto font-light leading-relaxed text-balance">

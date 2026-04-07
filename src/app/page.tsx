@@ -19,8 +19,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
 
-      <section id="services" className="py-32 bg-background relative overflow-hidden border-b border-white/5">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+      <section id="services" className="py-32 bg-background relative overflow-hidden border-b border-white/5 bg-blueprint">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
@@ -110,8 +110,9 @@ export default function Home() {
 
       <TechStack />
 
-      <section id="about" className="py-32 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-6">
+      <section id="about" className="py-32 bg-background relative overflow-hidden border-b border-white/5 bg-blueprint">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -148,8 +149,8 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 cyber-panel text-accent-secondary mb-6 text-[10px] font-mono uppercase tracking-widest">
                    &gt; Origin_Protocol
                 </div>
-                <h3 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase font-mono header-jitter phosphor-glow-green">
-                  Synthesizing <br/> <span className="text-accent-primary">Capital</span>_
+                <h3 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase font-mono">
+                  Synthesizing <br/> <span className="text-accent-primary">Capital</span>
                 </h3>
                 <p className="text-dim-primary text-xl font-mono leading-relaxed max-w-xl">
                     Architecting high-precision systems where mathematical syntax meets industrial-scale capital assets.
@@ -166,23 +167,21 @@ export default function Home() {
               </div>
 
               {/* System Logs Visual */}
-              <div className="mt-8 cyber-panel bg-background/50 p-4 font-mono text-[9px] text-accent-primary/50 overflow-hidden h-32 relative">
+              <div className="mt-8 cyber-panel bg-background/50 p-4 font-mono text-[9px] text-accent-primary/60 overflow-hidden h-32 relative border-accent-primary/10">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-background z-10"></div>
                 <motion.div
                   animate={{ y: ["0%", "-50%", "0%"] }}
                   transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                   className="space-y-1"
                 >
-                  <div>[SYS_LOG] INITIALIZING_CORE_ENGINE... OK</div>
-                  <div>[PROD_V2] DEPLOYING_SCALABLE_UI_SYSTEMS... DONE</div>
-                  <div>[ALGO_V4] SCANNING_MARKET_VECTORS... DONE</div>
-                  <div>[SYS_SEC] VALIDATING_PRODUCT_STRUCTURE... VERIFIED</div>
-                  <div>[DATA_STR] AGGREGATING_REAL_TIME_FEEDS... NOMINAL</div>
-                  <div>[PROD_V2] OPTIMIZING_USER_EXPERIENCE... 100%</div>
-                  <div>[SYS_LOG] STARTING_EXECUTION_ENGINE... READY</div>
-                  <div>[ALGO_V4] ALPHA_SIGNAL_DETECTED: 0.842</div>
-                  <div>[SYS_LOG] DEPLOYING_PRODUCT_CLUSTER... SUCCESS</div>
-                  <div>[PROD_V2] SYNCING_DISTRIBUTED_ASSETS... OK</div>
+                  <div>[CORE_01] INITIALIZING_EQUITY_ENGINE... OK</div>
+                  <div>[UI_02] DEPLOYING_ANALYTIC_DASHBOARD... DONE</div>
+                  <div>[ALGO_04] SCANNING_MARKET_VECTORS... DONE</div>
+                  <div>[SEC_01] VALIDATING_ASSET_ENCRYPTION... VERIFIED</div>
+                  <div>[DATA_99] AGGREGATING_REAL_TIME_FEEDS... NOMINAL</div>
+                  <div>[UI_02] OPTIMIZING_DATA_VISUALIZATION... 100%</div>
+                  <div>[CORE_01] STARTING_EXECUTION_STRATEGY... READY</div>
+                  <div>[ALGO_04] SIGNAL_CONFIRMED: ALPHA_RESERVE</div>
                 </motion.div>
               </div>
 

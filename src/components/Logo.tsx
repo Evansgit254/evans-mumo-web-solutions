@@ -25,7 +25,6 @@ export default function Logo({ className = "" }: { className?: string }) {
                         d="M50 20 L76 35 V65 L50 80 L24 65 V35 Z"
                         stroke="hsl(var(--accent-primary))"
                         strokeWidth="2"
-                        className="animate-pulse-slow"
                     />
 
                     {/* Data Lines */}
@@ -37,7 +36,7 @@ export default function Logo({ className = "" }: { className?: string }) {
                     />
 
                     {/* Core node */}
-                    <circle cx="50" cy="50" r="4" className="fill-accent-primary animate-blink" />
+                    <circle cx="50" cy="50" r="4" className="fill-accent-primary animate-pulse" />
                 </svg>
             </div>
 

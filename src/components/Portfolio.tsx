@@ -44,8 +44,8 @@ export default function Portfolio() {
     ];
 
     return (
-        <section id="work" className="py-32 bg-background relative overflow-hidden border-b border-white/5">
-            <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+        <section id="work" className="py-32 bg-background relative overflow-hidden border-b border-white/5 bg-blueprint">
+            <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
             
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
@@ -80,10 +80,10 @@ export default function Portfolio() {
                             whileHover={{ y: -8 }}
                             className="group relative"
                         >
-                            <div className={`relative aspect-[16/10] overflow-hidden cyber-panel rounded-none shadow-2xl glitch-hover ${project.type === "product" ? "border-accent-secondary/30" : "border-accent-primary/30"}`}>
+                            <div className={`relative aspect-[16/10] overflow-hidden cyber-panel rounded-none shadow-2xl ${project.type === "product" ? "border-accent-primary/20" : "border-accent-secondary/20"}`}>
                                 <motion.img
-                                    whileHover={{ scale: 1.1 }}
-                                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                                     src={project.image}
                                     alt={project.title}
                                     className="w-full h-full object-cover"
@@ -92,12 +92,12 @@ export default function Portfolio() {
                                 
                                 <div className="absolute inset-x-0 bottom-0 p-10 translate-y-4 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 flex justify-between items-end">
                                     <div className="flex flex-col gap-2">
-                                        <p className={`${project.type === "product" ? "text-accent-secondary phosphor-glow-cyan" : "text-accent-primary phosphor-glow-green"} text-[10px] font-black uppercase tracking-[0.3em] mb-1`}>{project.category}</p>
+                                        <p className={`${project.type === "product" ? "text-accent-primary" : "text-white/40"} text-[10px] font-black uppercase tracking-[0.3em] mb-1`}>{project.category}</p>
                                         <h4 className="text-3xl font-black text-white tracking-tighter">{project.title}</h4>
                                     </div>
                                     <Link 
                                         href={`/projects/${project.slug}`} 
-                                        className={`px-6 py-2.5 rounded-none bg-white text-black text-xs font-black uppercase tracking-widest ${project.type === "product" ? "hover:bg-accent-secondary" : "hover:bg-accent-primary"} transition-all`}
+                                        className={`px-6 py-2.5 rounded-none bg-white text-black text-xs font-black uppercase tracking-widest ${project.type === "product" ? "hover:bg-accent-primary" : "hover:bg-accent-secondary"} transition-all`}
                                     >
                                         View Case Study
                                     </Link>
@@ -106,7 +106,7 @@ export default function Portfolio() {
                             
                             <div className="mt-8 px-4 flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className={`text-[10px] px-3 py-1 rounded-none border ${project.type === "product" ? "border-accent-secondary/20 bg-accent-secondary/5 text-dim-secondary" : "border-accent-primary/20 bg-accent-primary/5 text-dim-primary"} font-mono`}>{tag}</span>
+                                    <span key={tag} className={`text-[10px] px-3 py-1 rounded-none border ${project.type === "product" ? "border-accent-primary/20 bg-accent-primary/5 text-dim-primary" : "border-accent-secondary/20 bg-accent-secondary/5 text-dim-secondary"} font-mono`}>{tag}</span>
                                 ))}
                             </div>
                         </motion.div>
