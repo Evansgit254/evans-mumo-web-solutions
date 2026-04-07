@@ -54,7 +54,7 @@ export default function TechStack() {
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="cyber-panel rounded-none rounded-[2.5rem] p-10 group relative overflow-hidden"
+                            className="cyber-panel rounded-none rounded-none p-10 group relative overflow-hidden"
                         >
                             {/* Animated Glow Backdrop */}
                             <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent-primary/5 blur-[80px] rounded-full group-hover:bg-accent-primary/20 transition-all duration-700 pointer-events-none"></div>
@@ -69,7 +69,7 @@ export default function TechStack() {
                                     <motion.span
                                         key={skill}
                                         whileHover={{ scale: 1.05, borderColor: "hsla(var(--accent-primary) / 0.5)" }}
-                                        className="px-6 py-2.5 rounded-2xl border border-white/5 bg-white/5 text-sm font-medium text-foreground/70 hover:text-white transition-all cursor-default select-none backdrop-blur-md shadow-sm"
+                                        className="px-6 py-2.5 rounded-none border border-white/5 bg-white/5 text-sm font-medium text-foreground/70 hover:text-white transition-all cursor-default select-none backdrop-blur-md shadow-sm"
                                     >
                                         {skill}
                                     </motion.span>

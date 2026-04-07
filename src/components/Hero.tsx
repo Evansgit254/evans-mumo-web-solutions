@@ -1,6 +1,6 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Hero() {
@@ -33,29 +33,87 @@ export default function Hero() {
         }
     } as const;
 
+    const [systemStats, setSystemStats] = useState({
+        load: "0.00",
+        uptime: "00:00:00",
+        status: "INITIALIZING"
+    });
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSystemStats({
+                load: (Math.random() * 5 + 0.5).toFixed(2),
+                uptime: "14:22:09",
+                status: Math.random() > 0.1 ? "NOMINAL" : "OPTIMIZING"
+            });
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background">
             {/* Background elements follow */}
             
-            {/* Dynamic Mesh Background */}
-            <div className="absolute inset-0 bg-premium-mesh opacity-40 z-0"></div>
+            {/* Data Stream Background */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-[0.03]">
+                <div className="absolute inset-0 flex flex-wrap gap-4 text-[10px] font-mono leading-none select-none break-all">
+                    {Array.from({ length: 20 }).map((_, i) => (
+                        <motion.div
+                            key={i}
+                            animate={{ y: ["0%", "-100%"] }}
+                            transition={{ 
+                                duration: 20 + Math.random() * 30, 
+                                repeat: Infinity, 
+                                ease: "linear",
+                                delay: -Math.random() * 20
+                            }}
+                            className="whitespace-nowrap"
+                        >
+                            {Array.from({ length: 100 }).map((_, j) => (
+                                <div key={j} className="mb-2">
+                                    {Math.random() > 0.5 ? "0x" + Math.floor(Math.random() * 0xFFFFFF).toString(16) : "SIG_" + Math.floor(Math.random() * 1000)}
+                                    &nbsp;{Math.random() > 0.5 ? "+" : "-"}{(Math.random() * 10).toFixed(2)}%
+                                </div>
+                            ))}
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Scanning Line */}
+            <motion.div 
+                animate={{ y: ["-100%", "200%"] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-x-0 h-[2px] bg-accent-primary/20 blur-[2px] z-10 pointer-events-none"
+            />
             
-            <motion.div 
-                animate={{ 
-                    x: [0, 50, 0],
-                    y: [0, -30, 0],
-                }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute top-1/4 -left-20 w-80 h-80 bg-accent-primary/10 blur-[40px] rounded-full pointer-events-none z-0"
-            ></motion.div>
-            <motion.div 
-                animate={{ 
-                    x: [0, -50, 0],
-                    y: [0, 30, 0],
-                }}
-                transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-                className="absolute bottom-1/4 -right-20 w-80 h-80 bg-accent-secondary/10 blur-[40px] rounded-full pointer-events-none z-0"
-            ></motion.div>
+            <div className="absolute top-24 right-6 md:right-12 z-30 hidden md:block">
+                <div className="cyber-panel p-4 text-[10px] font-mono space-y-2 w-48 bg-background/80">
+                    <div className="flex justify-between items-center text-accent-primary border-b border-accent-primary/20 pb-1 mb-2">
+                        <span>SYSTEM_HUD</span>
+                        <span className="animate-pulse">●</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-foreground/40">LOAD_AVG</span>
+                        <span className="text-foreground">{systemStats.load}%</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-foreground/40">UPTIME</span>
+                        <span className="text-foreground">{systemStats.uptime}</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span className="text-foreground/40">STATE</span>
+                        <span className="text-accent-primary">{systemStats.status}</span>
+                    </div>
+                    <div className="mt-2 h-1 w-full bg-white/5 overflow-hidden">
+                        <motion.div 
+                            animate={{ width: ["10%", "90%", "30%", "60%"] }}
+                            transition={{ duration: 5, repeat: Infinity }}
+                            className="h-full bg-accent-primary"
+                        />
+                    </div>
+                </div>
+            </div>
 
             <div
                 className="container-hero mx-auto px-6 relative z-20 text-center"

@@ -57,7 +57,7 @@ export default function Testimonials() {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.15 }}
                             whileHover={{ y: -8 }}
-                            className="p-10 rounded-[3rem] cyber-panel rounded-none flex flex-col justify-between h-full group"
+                            className="p-10 rounded-none cyber-panel rounded-none flex flex-col justify-between h-full group"
                         >
                             <div>
                                 <div className="text-5xl mb-10 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110 inline-block">

@@ -44,7 +44,7 @@ export default function Navbar() {
                     <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                         <Link
                             href="#contact"
-                            className="px-8 py-3 rounded-2xl bg-accent-primary text-black text-xs font-black uppercase tracking-[0.2em] hover:bg-white transition-all shadow-lg shadow-accent-primary/20"
+                            className="px-8 py-3 rounded-none bg-accent-primary text-black text-xs font-black uppercase tracking-[0.2em] hover:bg-white transition-all shadow-lg shadow-accent-primary/20"
                         >
                             Start a Project
                         </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
                 {/* Mobile Toggle */}
                 <button 
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="md:hidden text-foreground p-3 rounded-2xl cyber-panel rounded-none z-50 transition-all hover:bg-white/10"
+                    className="md:hidden text-foreground p-3 rounded-none cyber-panel rounded-none z-50 transition-all hover:bg-white/10"
                 >
                     <div className="w-6 h-5 relative flex flex-col justify-between">
                         <span className={`w-full h-0.5 bg-current transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
@@ -87,7 +87,7 @@ export default function Navbar() {
                             <Link
                                 href="#contact"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="w-full py-5 rounded-2xl bg-accent-primary text-black text-center text-sm font-black uppercase tracking-[0.2em] shadow-xl shadow-accent-primary/20"
+                                className="w-full py-5 rounded-none bg-accent-primary text-black text-center text-sm font-black uppercase tracking-[0.2em] shadow-xl shadow-accent-primary/20"
                             >
                                 Start a Project
                             </Link>

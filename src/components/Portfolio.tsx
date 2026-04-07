@@ -76,7 +76,7 @@ export default function Portfolio() {
                             whileHover={{ y: -8 }}
                             className="group relative"
                         >
-                            <div className="relative aspect-[16/10] overflow-hidden cyber-panel rounded-none rounded-[2.5rem] shadow-2xl">
+                            <div className="relative aspect-[16/10] overflow-hidden cyber-panel rounded-none rounded-none shadow-2xl">
                                 <motion.img
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -93,7 +93,7 @@ export default function Portfolio() {
                                     </div>
                                     <Link 
                                         href={`/projects/${project.slug}`} 
-                                        className="px-6 py-2.5 rounded-2xl bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-accent-primary transition-all"
+                                        className="px-6 py-2.5 rounded-none bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-accent-primary transition-all"
                                     >
                                         View Case Study
                                     </Link>

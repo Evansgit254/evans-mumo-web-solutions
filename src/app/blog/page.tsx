@@ -31,7 +31,7 @@ export default function BlogListing() {
     return (
         <main className="min-h-screen pt-40 pb-20 px-6">
             <div className="container mx-auto max-w-6xl relative z-10">
-                <header className="mb-24 text-center relative py-20 px-8 bg-white/5 border border-white/10 rounded-[3rem] overflow-hidden">
+                <header className="mb-24 text-center relative py-20 px-8 bg-white/5 border border-white/10 rounded-none overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-b from-accent-primary/5 to-transparent pointer-events-none"></div>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ export default function BlogListing() {
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: i * 0.1 }}
-                            className="bg-white/5 border border-white/10 rounded-[2.5rem] group relative overflow-hidden flex flex-col h-full transition-all duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
+                            className="bg-white/5 border border-white/10 rounded-none group relative overflow-hidden flex flex-col h-full transition-all duration-300 hover:bg-white/10 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)]"
                         >
                             <Link
                                 href={`/blog/${post.slug}`}

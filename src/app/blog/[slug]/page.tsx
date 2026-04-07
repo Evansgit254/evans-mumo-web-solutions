@@ -144,7 +144,7 @@ export default function BlogPost({ params }: { params: Promise<{ slug: string }>
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-32 p-12 bg-white/5 border border-white/10 rounded-[3rem] text-center relative overflow-hidden group transition-all duration-300 hover:bg-white/10 hover:shadow-2xl"
+                    className="mt-32 p-12 bg-white/5 border border-white/10 rounded-none text-center relative overflow-hidden group transition-all duration-300 hover:bg-white/10 hover:shadow-2xl"
                 >
                     <div className="absolute top-0 right-0 w-64 h-64 bg-accent-primary/10 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     <div className="relative z-10">
