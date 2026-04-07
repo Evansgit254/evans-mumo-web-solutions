@@ -22,8 +22,8 @@ export default function Footer() {
                 <div className="text-center text-foreground/50 text-xs border-t border-white/5 pt-8 w-full max-w-2xl font-medium">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p>&copy; {new Date().getFullYear()} Mumo Syntax & Capital.</p>
-                        <h4 className="text-2xl font-black tracking-tighter text-white mb-4 uppercase italic">MUMO<span className="text-accent-primary">FORGE</span></h4>
-                        <p className="text-foreground/40 text-xs font-mono tracking-widest leading-relaxed uppercase">Software & Security Engineering</p>
+                        <h4 className="text-2xl font-black tracking-tighter text-white mb-4 uppercase font-mono">MUMO<span className="text-accent-primary">SYNTAX</span></h4>
+                        <p className="text-foreground/40 text-xs font-mono tracking-widest leading-relaxed uppercase">&amp; Capital Engineering</p>
                     </div>
                 </div>
             </div>
