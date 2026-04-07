@@ -47,6 +47,7 @@ export default function RootLayout({
       >
 
         <Navbar />
+        <div className="scanline" />
         {children}
         <Footer />
         <Analytics />

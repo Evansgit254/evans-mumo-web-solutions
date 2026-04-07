@@ -11,7 +11,8 @@ export default function Portfolio() {
             tags: ["React", "FastAPI", "PostgreSQL"],
             image: "/images/trading-expert.png",
             slug: "trading-expert",
-            external: false
+            external: false,
+            type: "quant"
         },
         {
             title: "School Management System",
@@ -19,7 +20,8 @@ export default function Portfolio() {
             tags: ["Next.js", "TypeScript", "Prisma"],
             image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             slug: "school-management-system",
-            external: false
+            external: false,
+            type: "product"
         },
         {
             title: "Parkside Villa",
@@ -27,7 +29,8 @@ export default function Portfolio() {
             tags: ["Next.js", "React", "PostgreSQL"],
             image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
             slug: "parkside-villa",
-            external: false
+            external: false,
+            type: "product"
         },
         {
             title: "NRDC Kenya",
@@ -35,7 +38,8 @@ export default function Portfolio() {
             tags: ["Next.js", "TypeScript", "Tailwind"],
             image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
             slug: "nrdc-project",
-            external: false
+            external: false,
+            type: "product"
         }
     ];
 
@@ -76,7 +80,7 @@ export default function Portfolio() {
                             whileHover={{ y: -8 }}
                             className="group relative"
                         >
-                            <div className="relative aspect-[16/10] overflow-hidden cyber-panel rounded-none rounded-none shadow-2xl">
+                            <div className={`relative aspect-[16/10] overflow-hidden cyber-panel rounded-none shadow-2xl glitch-hover ${project.type === "product" ? "border-accent-secondary/30" : "border-accent-primary/30"}`}>
                                 <motion.img
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -88,12 +92,12 @@ export default function Portfolio() {
                                 
                                 <div className="absolute inset-x-0 bottom-0 p-10 translate-y-4 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 flex justify-between items-end">
                                     <div className="flex flex-col gap-2">
-                                        <p className="text-accent-primary text-[10px] font-black uppercase tracking-[0.3em] mb-1">{project.category}</p>
+                                        <p className={`${project.type === "product" ? "text-accent-secondary" : "text-accent-primary"} text-[10px] font-black uppercase tracking-[0.3em] mb-1`}>{project.category}</p>
                                         <h4 className="text-3xl font-black text-white tracking-tighter">{project.title}</h4>
                                     </div>
                                     <Link 
                                         href={`/projects/${project.slug}`} 
-                                        className="px-6 py-2.5 rounded-none bg-white text-black text-xs font-black uppercase tracking-widest hover:bg-accent-primary transition-all"
+                                        className={`px-6 py-2.5 rounded-none bg-white text-black text-xs font-black uppercase tracking-widest ${project.type === "product" ? "hover:bg-accent-secondary" : "hover:bg-accent-primary"} transition-all`}
                                     >
                                         View Case Study
                                     </Link>
@@ -102,7 +106,7 @@ export default function Portfolio() {
                             
                             <div className="mt-8 px-4 flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className="text-[10px] px-3 py-1 rounded-full border border-white/5 bg-white/5 text-foreground/50">{tag}</span>
+                                    <span key={tag} className={`text-[10px] px-3 py-1 rounded-none border ${project.type === "product" ? "border-accent-secondary/20 bg-accent-secondary/5 text-accent-secondary/70" : "border-accent-primary/20 bg-accent-primary/5 text-accent-primary/70"} font-mono`}>{tag}</span>
                                 ))}
                             </div>
                         </motion.div>
