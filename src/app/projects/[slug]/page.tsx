@@ -4,10 +4,10 @@ import Link from 'next/link';
 // Dummy data for case studies
 const projects: Record<string, { title: string; subtitle: string; challenge: string; solution: string; stack: string[]; liveUrl?: string; githubUrl?: string }> = {
     'nrdc-project': {
-        title: 'NRDC Marketplace',
-        subtitle: 'Full-Stack Web Platform & Resource Hub',
-        challenge: 'The Natural Resources Defense Council required a scalable, secure digital marketplace to manage resources and connect stakeholders effectively across their environmental initiatives.',
-        solution: 'Architected a robust Full-Stack platform using Next.js and TypeScript. Implemented secure authentication flows, role-based access control, and a high-performance database schema to ensure reliability under heavy concurrent usage.',
+        title: 'NRDC Kenya',
+        subtitle: 'Digital Platform for Humanitarian Aid',
+        challenge: 'Nutrition for Refugees and Displaced Communities (NRDC) needed a modern, accessible digital platform to connect with donors, showcase their humanitarian programs, and securely process online donations.',
+        solution: 'Developed a fully responsive web platform featuring a seamless donation flow, dynamic impact stories hub, and integrated content management to amplify their mission of providing health and food security to those in need.',
         stack: ['Next.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'Tailwind CSS'],
         liveUrl: 'https://nrdc.africa'
     },
@@ -33,6 +33,14 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         challenge: 'Educational institutions struggled with fragmented data, manual fee tracking, and inefficient communication between administration, teachers, and parents.',
         solution: 'Built a multi-tenant ERP platform using Next.js. Features include automated fee processing, real-time attendance tracking, academic reporting, and a secure parent-teacher communication portal.',
         stack: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'Prisma']
+    },
+    'parkside-villa': {
+        title: 'Parkside Villa Kitui',
+        subtitle: 'Luxury Hotel & Booking Platform',
+        challenge: 'Parkside Villa needed a modern digital presence to showcase their luxury rooms and premier conference facilities, along with an intuitive booking experience for guests visiting Kitui, Kenya.',
+        solution: 'Designed and developed a premium, responsive hospitality website focusing on a seamless booking experience, elegant user interface, and optimized performance to maximize direct bookings and brand prestige.',
+        stack: ['Next.js', 'React', 'Tailwind CSS', 'PostgreSQL'],
+        liveUrl: 'https://www.parksidevillakitui.com/'
     }
 };
 export async function generateStaticParams() {

@@ -29,10 +29,18 @@ export default function Portfolio() {
             external: false
         },
         {
-            title: "NRDC Marketplace",
-            category: "Full-Stack Web Platform",
-            tags: ["Django", "React", "AWS"],
-            image: "https://images.unsplash.com/photo-1642790106117-e829e14a795f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Parkside Villa",
+            category: "Hotel Booking System",
+            tags: ["Next.js", "React", "PostgreSQL"],
+            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            slug: "parkside-villa",
+            external: false
+        },
+        {
+            title: "NRDC Kenya",
+            category: "NGO Web Platform",
+            tags: ["Next.js", "TypeScript", "Tailwind"],
+            image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
             slug: "nrdc-project",
             external: false
         }
