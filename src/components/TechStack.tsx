@@ -54,7 +54,7 @@ export default function TechStack() {
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="glass-morphism rounded-[2.5rem] p-10 group relative overflow-hidden"
+                            className="cyber-panel rounded-none rounded-[2.5rem] p-10 group relative overflow-hidden"
                         >
                             {/* Animated Glow Backdrop */}
                             <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent-primary/5 blur-[80px] rounded-full group-hover:bg-accent-primary/20 transition-all duration-700 pointer-events-none"></div>

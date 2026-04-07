@@ -4,46 +4,40 @@ export default function Logo({ className = "" }: { className?: string }) {
     return (
         <div className={`flex items-center gap-3 transition-transform hover:scale-105 duration-300 cursor-pointer ${className}`}>
             <div className="relative w-10 h-10 flex items-center justify-center">
-                {/* Glow Effect */}
-                <div className="absolute inset-0 bg-accent-primary/30 rounded-lg blur-lg animate-pulse-slow"></div>
+                {/* Sharp Corner Bounds */}
+                <div className="absolute inset-0 border border-accent-primary/20 bg-background/50 backdrop-blur-md">
+                    <div className="absolute top-0 left-0 w-2 h-2 border-t-2 border-l-2 border-accent-primary"></div>
+                    <div className="absolute bottom-0 right-0 w-2 h-2 border-b-2 border-r-2 border-accent-primary"></div>
+                </div>
 
-                {/* SVG Symbol: Hexagonal Forge Shield */}
+                {/* SVG Symbol: Data Core Matrix */}
                 <svg
                     viewBox="0 0 100 100"
                     className="w-full h-full relative z-10"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                 >
-                    <defs>
-                        <linearGradient id="shield-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stopColor="hsl(var(--accent-primary))" />
-                            <stop offset="100%" stopColor="hsl(var(--accent-secondary))" />
-                        </linearGradient>
-                    </defs>
+                    {/* Outer Tech Ring */}
+                    <circle cx="50" cy="50" r="40" stroke="hsl(var(--accent-primary))" strokeWidth="1" strokeDasharray="4 6" className="animate-spin-slow opacity-50" />
                     
-                    {/* Hexagonal Frame */}
+                    {/* Inner Hexagon Core */}
                     <path
-                        d="M50 5 L90 25 V75 L50 95 L10 75 V25 Z"
-                        stroke="url(#shield-gradient)"
+                        d="M50 20 L76 35 V65 L50 80 L24 65 V35 Z"
+                        stroke="hsl(var(--accent-primary))"
                         strokeWidth="2"
-                        strokeOpacity="0.3"
                         className="animate-pulse-slow"
                     />
 
-                    {/* Technical "MF" Blueprint */}
+                    {/* Data Lines */}
                     <path
-                        d="M30 70 V30 L50 45 L70 30 V45 M50 45 V75 M50 55 H70 M50 68 H65"
-                        stroke="url(#shield-gradient)"
-                        strokeWidth="6"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="drop-shadow-[0_0_15px_hsla(var(--accent-primary)/0.6)]"
+                        d="M50 20 V80 M24 35 L76 65 M24 65 L76 35"
+                        stroke="hsl(var(--accent-secondary))"
+                        strokeWidth="1"
+                        strokeOpacity="0.4"
                     />
 
-                    {/* Corner accents */}
-                    <circle cx="50" cy="5" r="1.5" className="fill-accent-primary" />
-                    <circle cx="90" cy="25" r="1.5" className="fill-accent-primary" />
-                    <circle cx="10" cy="25" r="1.5" className="fill-accent-primary" />
+                    {/* Core node */}
+                    <circle cx="50" cy="50" r="4" className="fill-accent-primary animate-blink" />
                 </svg>
             </div>
 

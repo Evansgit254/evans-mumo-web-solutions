@@ -61,20 +61,20 @@ export default function Hero() {
                 className="container-hero mx-auto px-6 relative z-20 text-center"
             >
                 <div className="inline-block mb-10">
-                    <div className="flex items-center gap-3 px-6 py-2.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md shadow-sm">
+                    <div className="flex items-center gap-3 px-6 py-2.5 cyber-panel">
                         <span className="relative flex h-2 w-2">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-primary opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-primary"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full bg-accent-primary opacity-75"></span>
+                            <span className="relative inline-flex h-2 w-2 bg-accent-primary"></span>
                         </span>
-                        <h2 className="text-foreground/80 font-medium text-sm tracking-wide">
-                            Open for new projects
+                        <h2 className="text-accent-primary font-mono text-sm tracking-widest uppercase">
+                            System_Online // Ready
                         </h2>
                     </div>
                 </div>
                 
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tight leading-[1.1] text-balance text-white transform-gpu">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[1.1] text-balance text-white transform-gpu uppercase font-mono">
                     Forging <br className="hidden md:block"/>
-                    <span className="text-gradient-accent">Digital Resilience.</span>
+                    <span className="text-foreground">Digital Resilience</span><span className="text-accent-primary animate-blink">_</span>
                 </h1>
                 
                 <p className="text-lg md:text-2xl text-foreground/60 mb-14 max-w-2xl mx-auto font-light leading-relaxed text-balance">
@@ -85,15 +85,15 @@ export default function Hero() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                     <Link
                         href="#contact"
-                        className="shimmer-btn px-12 py-5 rounded-full bg-white text-black font-black hover:shadow-[0_20px_40px_-10px_rgba(255,255,255,0.3)] transition-all duration-500 w-full sm:w-auto text-center relative z-10"
+                        className="cyber-panel px-12 py-5 bg-accent-primary/10 text-accent-primary font-black uppercase tracking-widest hover:bg-accent-primary hover:text-black transition-all w-full sm:w-auto text-center relative z-10"
                     >
-                        Let's Work Together
+                        [ Initialize Contact ]
                     </Link>
                     <Link
                         href="#work"
-                        className="px-10 py-5 rounded-full border border-white/10 bg-white/5 text-foreground font-medium hover:bg-white/10 transition-all duration-300 w-full sm:w-auto text-center"
+                        className="cyber-panel px-10 py-5 bg-background text-foreground/80 font-mono tracking-widest uppercase hover:text-accent-primary transition-all duration-300 w-full sm:w-auto text-center"
                     >
-                        Explore My Work
+                        &gt; Execute Portfolio
                     </Link>
                 </div>
             </div>

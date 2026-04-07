@@ -43,7 +43,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
-                className="md:col-span-8 p-12 glass-morphism rounded-[3rem] group relative overflow-hidden flex flex-col justify-between min-h-[500px]"
+                className="md:col-span-8 p-12 cyber-panel rounded-none rounded-[3rem] group relative overflow-hidden flex flex-col justify-between min-h-[500px]"
               >
                   <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[120px] rounded-full group-hover:bg-accent-primary/15 transition-all duration-1000 pointer-events-none"></div>
                   <div className="relative z-10">
@@ -69,7 +69,7 @@ export default function Home() {
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ delay: 0.1 }}
                 whileHover={{ y: -8 }}
-                className="md:col-span-4 p-12 glass-morphism rounded-[3rem] group relative overflow-hidden flex flex-col justify-between"
+                className="md:col-span-4 p-12 cyber-panel rounded-none rounded-[3rem] group relative overflow-hidden flex flex-col justify-between"
               >
                   <div className="absolute bottom-0 right-0 w-80 h-80 bg-accent-secondary/5 blur-[100px] rounded-full group-hover:bg-accent-secondary/15 transition-all duration-1000 pointer-events-none"></div>
                   <div className="relative z-10">
@@ -89,7 +89,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ delay: 0.2 }}
-                className="md:col-span-12 p-16 glass-morphism rounded-[3rem] group relative overflow-hidden flex flex-col items-center justify-center text-center py-24"
+                className="md:col-span-12 p-16 cyber-panel rounded-none rounded-[3rem] group relative overflow-hidden flex flex-col items-center justify-center text-center py-24"
               >
                   <div className="absolute inset-0 bg-gradient-to-br from-accent-primary/10 via-accent-secondary/5 to-transparent opacity-50"></div>
                   <div className="relative z-10 max-w-4xl">

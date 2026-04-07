@@ -76,7 +76,7 @@ export default function Portfolio() {
                             whileHover={{ y: -8 }}
                             className="group relative"
                         >
-                            <div className="relative aspect-[16/10] overflow-hidden glass-morphism rounded-[2.5rem] shadow-2xl">
+                            <div className="relative aspect-[16/10] overflow-hidden cyber-panel rounded-none rounded-[2.5rem] shadow-2xl">
                                 <motion.img
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}

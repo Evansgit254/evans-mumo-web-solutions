@@ -26,7 +26,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled || mobileMenuOpen ? "py-4 glass-morphism border-b border-white/5 bg-background/80" : "py-8 bg-transparent"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled || mobileMenuOpen ? "py-4 cyber-panel rounded-none border-b border-white/5 bg-background/80" : "py-8 bg-transparent"
                 }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
@@ -54,7 +54,7 @@ export default function Navbar() {
                 {/* Mobile Toggle */}
                 <button 
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="md:hidden text-foreground p-3 rounded-2xl glass-morphism z-50 transition-all hover:bg-white/10"
+                    className="md:hidden text-foreground p-3 rounded-2xl cyber-panel rounded-none z-50 transition-all hover:bg-white/10"
                 >
                     <div className="w-6 h-5 relative flex flex-col justify-between">
                         <span className={`w-full h-0.5 bg-current transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
