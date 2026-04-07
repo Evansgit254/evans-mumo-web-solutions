@@ -92,7 +92,7 @@ export default function Portfolio() {
                                 
                                 <div className="absolute inset-x-0 bottom-0 p-10 translate-y-4 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 flex justify-between items-end">
                                     <div className="flex flex-col gap-2">
-                                        <p className={`${project.type === "product" ? "text-accent-secondary" : "text-accent-primary"} text-[10px] font-black uppercase tracking-[0.3em] mb-1`}>{project.category}</p>
+                                        <p className={`${project.type === "product" ? "text-accent-secondary phosphor-glow-cyan" : "text-accent-primary phosphor-glow-green"} text-[10px] font-black uppercase tracking-[0.3em] mb-1`}>{project.category}</p>
                                         <h4 className="text-3xl font-black text-white tracking-tighter">{project.title}</h4>
                                     </div>
                                     <Link 
@@ -106,7 +106,7 @@ export default function Portfolio() {
                             
                             <div className="mt-8 px-4 flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
-                                    <span key={tag} className={`text-[10px] px-3 py-1 rounded-none border ${project.type === "product" ? "border-accent-secondary/20 bg-accent-secondary/5 text-accent-secondary/70" : "border-accent-primary/20 bg-accent-primary/5 text-accent-primary/70"} font-mono`}>{tag}</span>
+                                    <span key={tag} className={`text-[10px] px-3 py-1 rounded-none border ${project.type === "product" ? "border-accent-secondary/20 bg-accent-secondary/5 text-dim-secondary" : "border-accent-primary/20 bg-accent-primary/5 text-dim-primary"} font-mono`}>{tag}</span>
                                 ))}
                             </div>
                         </motion.div>

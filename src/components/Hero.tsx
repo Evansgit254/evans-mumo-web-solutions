@@ -130,12 +130,12 @@ export default function Hero() {
                     </div>
                 </div>
                 
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[1.1] text-balance text-white transform-gpu uppercase font-mono">
+                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[1.1] text-balance text-white transform-gpu uppercase font-mono header-jitter phosphor-glow-green">
                     Forging <br className="hidden md:block"/>
                     <span className="text-foreground">Digital Resilience</span><span className="text-accent-primary animate-blink">_</span>
                 </h1>
                 
-                <p className="text-lg md:text-2xl text-foreground/60 mb-14 max-w-2xl mx-auto font-light leading-relaxed text-balance">
+                <p className="text-lg md:text-2xl text-dim-primary mb-14 max-w-2xl mx-auto font-light leading-relaxed text-balance">
                     At <span className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</span>, we architect high-frequency algorithms and resilient web systems. 
                     Specialized in <span className="text-foreground/90 font-medium">Distributed Systems</span> and <span className="text-foreground/90 font-medium">Intelligent Analytics</span>.
                 </p>

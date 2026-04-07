@@ -148,15 +148,15 @@ export default function Home() {
                 <div className="inline-flex items-center gap-2 px-3 py-1 cyber-panel text-accent-secondary mb-6 text-[10px] font-mono uppercase tracking-widest">
                    &gt; Origin_Protocol
                 </div>
-                <h3 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase font-mono">
+                <h3 className="text-5xl md:text-7xl font-black mb-8 leading-[1.1] tracking-tighter uppercase font-mono header-jitter phosphor-glow-green">
                   Synthesizing <br/> <span className="text-accent-primary">Capital</span>_
                 </h3>
-                <p className="text-foreground/40 text-xl font-mono leading-relaxed max-w-xl">
+                <p className="text-dim-primary text-xl font-mono leading-relaxed max-w-xl">
                     Architecting high-precision systems where mathematical syntax meets industrial-scale capital assets.
                 </p>
               </div>
 
-              <div className="space-y-6 text-foreground/60 text-lg font-light leading-relaxed font-sans">
+              <div className="space-y-6 text-dim-primary text-lg font-light leading-relaxed font-sans">
                 <p>
                   <strong className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</strong> is an elite engineering studio led by <strong className="text-foreground tracking-tight font-medium">Evans Mumo</strong>. We operate at the intersection of **Quantitative Strategy** and **Product Innovation**.
                 </p>
