@@ -62,7 +62,7 @@ export default function Home() {
                   </div>
               </motion.div>
 
-              {/* Bento Card 2: Security */}
+              {/* Bento Card 2: Product Engineering */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -75,9 +75,9 @@ export default function Home() {
                       <div className="w-16 h-16 cyber-panel flex items-center justify-center text-accent-secondary mb-12 group-hover:scale-105 transition-all duration-700 bg-accent-secondary/5">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                       </div>
-                      <h4 className="text-4xl font-black mb-8 tracking-tighter leading-tight uppercase font-mono">Protocol<br/>Security</h4>
+                      <h4 className="text-4xl font-black mb-8 tracking-tighter leading-tight uppercase font-mono">Product<br/>Engineering</h4>
                       <p className="text-foreground/60 leading-relaxed text-xl font-light">
-                          Institutional-grade security integrated into every deployment cycle.
+                          Developing intuitive, scalable software products with elite UI/UX standards.
                       </p>
                   </div>
               </motion.div>
@@ -158,10 +158,10 @@ export default function Home() {
 
               <div className="space-y-6 text-foreground/60 text-lg font-light leading-relaxed font-sans">
                 <p>
-                  <strong className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</strong> is an elite quantitative engineering studio led by <strong className="text-foreground tracking-tight font-medium">Evans Mumo</strong>. We specialize in the development of low-latency algorithms, resilient distributed infrastructure, and data-driven intelligence.
+                  <strong className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</strong> is an elite engineering studio led by <strong className="text-foreground tracking-tight font-medium">Evans Mumo</strong>. We operate at the intersection of **Quantitative Strategy** and **Product Innovation**.
                 </p>
                 <p>
-                  Leveraging a double-threaded foundation in <strong className="text-foreground tracking-tight">Telecommunications Engineering</strong> and <strong className="text-foreground tracking-tight">Advanced Data Science</strong>, we provide the technical syntax required to deploy and scale complex capital systems.
+                  Whether we are architecting low-latency trading engines or developing large-scale software products, our philosophy remains the same: mathematical precision (Syntax) combined with high-impact scalability (Capital). 
                 </p>
               </div>
 
@@ -173,16 +173,16 @@ export default function Home() {
                   transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                   className="space-y-1"
                 >
-                  <div>[SYS_LOG] INITIALIZING_CAPITAL_PROTOCOL... OK</div>
+                  <div>[SYS_LOG] INITIALIZING_CORE_ENGINE... OK</div>
+                  <div>[PROD_V2] DEPLOYING_SCALABLE_UI_SYSTEMS... DONE</div>
                   <div>[ALGO_V4] SCANNING_MARKET_VECTORS... DONE</div>
-                  <div>[ALGO_V4] ALPHA_SIGNAL_DETECTED: 0.842</div>
-                  <div>[SYS_SEC] ENCRYPTING_DATA_SYNTAX... VERIFIED</div>
-                  <div>[SYS_LOG] DEPLOYING_RESILLIENT_NODE_01... SUCCESS</div>
+                  <div>[SYS_SEC] VALIDATING_PRODUCT_STRUCTURE... VERIFIED</div>
                   <div>[DATA_STR] AGGREGATING_REAL_TIME_FEEDS... NOMINAL</div>
+                  <div>[PROD_V2] OPTIMIZING_USER_EXPERIENCE... 100%</div>
                   <div>[SYS_LOG] STARTING_EXECUTION_ENGINE... READY</div>
-                  <div>[ALGO_V4] OPTIMIZING_ENTRY_POINTS... 99%</div>
-                  <div>[SYS_LOG] INITIALIZING_CAPITAL_PROTOCOL... OK</div>
-                  <div>[ALGO_V4] SCANNING_MARKET_VECTORS... DONE</div>
+                  <div>[ALGO_V4] ALPHA_SIGNAL_DETECTED: 0.842</div>
+                  <div>[SYS_LOG] DEPLOYING_PRODUCT_CLUSTER... SUCCESS</div>
+                  <div>[PROD_V2] SYNCING_DISTRIBUTED_ASSETS... OK</div>
                 </motion.div>
               </div>
 
