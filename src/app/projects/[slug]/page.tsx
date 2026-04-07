@@ -17,7 +17,7 @@ const projects: Record<string, { title: string; subtitle: string; challenge: str
         challenge: 'Traders needed a unified system to handle complex multi-market analysis, incorporating V8.1 logic and real-time execution, which was difficult to achieve with disparate tools.',
         solution: 'Developed a comprehensive platform integrating Python-based analysis with AI confirmation and precise execution capabilities, ensuring robust performance across various market conditions.',
         stack: ['Python', 'Pine Script', 'React', 'FastAPI'],
-        liveUrl: 'http://34.77.4.35:5000/',
+        liveUrl: 'http://34.140.231.67:5000/',
         githubUrl: 'https://github.com/Evansgit254/smc-scalp-signals.git'
     },
 
