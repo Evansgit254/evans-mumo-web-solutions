@@ -10,6 +10,7 @@ const cases = [
     desc: "Quantifying risk through recursive architectural validation and high-frequency trading logic.",
     tags: ["React", "FastAPI", "Quant"],
     image: "/images/trading-expert.png",
+    href: "http://34.140.231.67:5000/",
   },
   {
     id: "CASE_02_S",
@@ -24,6 +25,7 @@ const cases = [
     desc: "High-performance infrastructure for luxury hospitality and estate management.",
     tags: ["PostgreSQL", "Cloud", "Security"],
     image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    href: "https://www.parksidevillakitui.com/",
   },
   {
     id: "CASE_04_P",
@@ -31,6 +33,7 @@ const cases = [
     desc: "Decentralized marketplace architecture for global non-profit networks.",
     tags: ["Blockchain", "Next.js", "Scale"],
     image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
+    href: "https://www.nrdc.africa/en",
   },
 ];
 
@@ -57,26 +60,33 @@ export default function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group cursor-pointer"
+              className="group"
             >
-              <div className="relative aspect-[16/9] mb-6 overflow-hidden border border-outline-variant/30">
-                <Image
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                  alt={cs.title}
-                  src={cs.image}
-                  fill
-                />
-                <div className="absolute top-4 right-4 bg-surface/90 px-3 py-1 text-syntax-label border border-outline-variant">
-                  {cs.id}
+              <a 
+                href={cs.href || "#"} 
+                target={cs.href ? "_blank" : undefined} 
+                rel={cs.href ? "noopener noreferrer" : undefined}
+                className="block cursor-pointer"
+              >
+                <div className="relative aspect-[16/9] mb-6 overflow-hidden border border-outline-variant/30">
+                  <Image
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                    alt={cs.title}
+                    src={cs.image}
+                    fill
+                  />
+                  <div className="absolute top-4 right-4 bg-surface/90 px-3 py-1 text-syntax-label border border-outline-variant">
+                    {cs.id}
+                  </div>
                 </div>
-              </div>
-              <h3 className="text-strategy-md uppercase mb-2 group-hover:text-primary transition-colors">{cs.title}</h3>
-              <p className="text-body-sm text-on-surface-variant mb-4">{cs.desc}</p>
-              <div className="flex gap-3">
-                {cs.tags.map((tag) => (
-                  <span key={tag} className="bg-surface-variant px-2 py-1 text-syntax-label text-[10px] uppercase">{tag}</span>
-                ))}
-              </div>
+                <h3 className="text-strategy-md uppercase mb-2 group-hover:text-primary transition-colors">{cs.title}</h3>
+                <p className="text-body-sm text-on-surface-variant mb-4">{cs.desc}</p>
+                <div className="flex gap-3">
+                  {cs.tags.map((tag) => (
+                    <span key={tag} className="bg-surface-variant px-2 py-1 text-syntax-label text-[10px] uppercase">{tag}</span>
+                  ))}
+                </div>
+              </a>
             </motion.div>
           ))}
         </div>

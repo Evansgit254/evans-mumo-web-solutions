@@ -9,17 +9,17 @@ export default function Hero() {
     <section className="relative h-screen w-full flex flex-col justify-end overflow-hidden">
       {/* Hero Background Image */}
       <Image
-        alt="Architectural visualization"
+        alt="Mumo Syntax & Capital - Technical Visualization"
         className="absolute inset-0 w-full h-full object-cover"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC49TURFNiZjmpwW5F7lcTd13ZvMGN25cpGRWuMBFoFgd5tM8wDl0DWU7RcVR_nutMHVqtUV6wRaNC3ABnmqx7pZrRBWAF7zixF9eX53ANYmWe267GMt8OwDyE7NtcrunF9TtVnvPCyEXdzPKbgixSHvApej-PzinLjfWdJ82e5jo3p4vNvy5k0Tkfd8NbHKpolQOS3dfSXOgRp52NjactRRNxSmFSTauRX-_lZBn5BHZ-2aDi5JlwNcokrKsnsScUrz6vIr8HS55JQ"
+        src="/images/hero-cinematic-hd.jpg"
         fill
         priority
       />
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
+      {/* Gradient overlay — stronger at bottom to separate text from image */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
 
-      {/* Content */}
-      <div className="relative z-10 px-5 md:px-16 pb-16 md:pb-24 max-w-4xl">
+      {/* Content — positioned at the very bottom, below the image's built-in branding */}
+      <div className="relative z-10 px-5 md:px-16 pb-16 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,19 +28,10 @@ export default function Hero() {
           <span className="text-syntax-mono text-primary-fixed uppercase">System Status: Active</span>
         </motion.div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
-          className="text-[48px] md:text-display-lg leading-[1.1] text-on-background mb-4 uppercase"
-        >
-          SYNTAX TO <br /><span className="text-secondary-fixed">CAPITAL</span>
-        </motion.h2>
-
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.2 }}
           className="text-body-lg text-on-surface-variant max-w-xl mb-8"
         >
           Engineering precision meeting industrial-scale strategy. We architect high-performance systems for global capital markets.
@@ -49,7 +40,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.4 }}
         >
           <Link
             href="#contact"
@@ -63,7 +54,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Blueprint Decoration Overlay (from Stitch) */}
+      {/* Blueprint Decoration Overlay */}
       <div className="absolute right-0 bottom-0 w-1/3 h-1/2 blueprint-bg opacity-20 pointer-events-none border-l border-t border-outline-variant/20"></div>
     </section>
   );
