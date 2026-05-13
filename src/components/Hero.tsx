@@ -1,144 +1,70 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Hero() {
-    const containerRef = useRef(null);
-    const { scrollY } = useScroll();
-    const y1 = useTransform(scrollY, [0, 500], [0, 100]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  return (
+    <section className="relative h-screen w-full flex flex-col justify-end overflow-hidden">
+      {/* Hero Background Image */}
+      <Image
+        alt="Architectural visualization"
+        className="absolute inset-0 w-full h-full object-cover"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC49TURFNiZjmpwW5F7lcTd13ZvMGN25cpGRWuMBFoFgd5tM8wDl0DWU7RcVR_nutMHVqtUV6wRaNC3ABnmqx7pZrRBWAF7zixF9eX53ANYmWe267GMt8OwDyE7NtcrunF9TtVnvPCyEXdzPKbgixSHvApej-PzinLjfWdJ82e5jo3p4vNvy5k0Tkfd8NbHKpolQOS3dfSXOgRp52NjactRRNxSmFSTauRX-_lZBn5BHZ-2aDi5JlwNcokrKsnsScUrz6vIr8HS55JQ"
+        fill
+        priority
+      />
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent"></div>
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-            }
-        }
-    } as const;
+      {/* Content */}
+      <div className="relative z-10 px-5 md:px-16 pb-16 md:pb-24 max-w-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="inline-block px-3 py-1 mb-6 border border-primary/30 glass-panel"
+        >
+          <span className="text-syntax-mono text-primary-fixed uppercase">System Status: Active</span>
+        </motion.div>
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { 
-            opacity: 1, 
-            y: 0, 
-            transition: { 
-                type: "spring",
-                stiffness: 100,
-                damping: 20
-            } 
-        }
-    } as const;
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="text-[48px] md:text-display-lg leading-[1.1] text-on-background mb-4 uppercase"
+        >
+          SYNTAX TO <br /><span className="text-secondary-fixed">CAPITAL</span>
+        </motion.h2>
 
-    const [systemStats, setSystemStats] = useState({
-        load: "0.00",
-        uptime: "00:00:00",
-        status: "INITIALIZING"
-    });
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="text-body-lg text-on-surface-variant max-w-xl mb-8"
+        >
+          Engineering precision meeting industrial-scale strategy. We architect high-performance systems for global capital markets.
+        </motion.p>
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setSystemStats({
-                load: (Math.random() * 5 + 0.5).toFixed(2),
-                uptime: "14:22:09",
-                status: Math.random() > 0.1 ? "NOMINAL" : "OPTIMIZING"
-            });
-        }, 3000);
-        return () => clearInterval(interval);
-    }, []);
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <Link
+            href="#contact"
+            className="inline-flex items-center gap-3 bg-secondary-fixed text-surface px-8 py-4 font-display text-lg font-bold tracking-widest hover:bg-white transition-all group"
+          >
+            ENTER PORTAL
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </motion.div>
+      </div>
 
-    return (
-        <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-background bg-blueprint">
-            {/* Background elements follow */}
-            
-            <div className="absolute top-24 right-6 md:right-12 z-30 hidden md:block">
-                <div className="cyber-panel p-4 text-[10px] font-mono space-y-2 w-48 bg-background/50 border-accent-primary/10">
-                    <div className="flex justify-between items-center text-accent-primary border-b border-accent-primary/10 pb-1 mb-2">
-                        <span>DATA_CORE_HUD</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span className="text-foreground/30">CPU</span>
-                        <span className="text-foreground">{systemStats.load}%</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span className="text-foreground/30">RUNTIME</span>
-                        <span className="text-foreground">STABLE</span>
-                    </div>
-                    <div className="flex justify-between">
-                        <span className="text-foreground/30">NETWORK</span>
-                        <span className="text-accent-primary">ACTIVE</span>
-                    </div>
-                    <div className="mt-2 h-[2px] w-full bg-accent-primary/10 overflow-hidden">
-                        <motion.div 
-                            animate={{ width: ["10%", "90%", "30%", "60%"] }}
-                            transition={{ duration: 5, repeat: Infinity }}
-                            className="h-full bg-accent-primary"
-                        />
-                    </div>
-                </div>
-            </div>
-
-            <div
-                className="container-hero mx-auto px-6 relative z-20 text-center"
-            >
-                <div className="inline-block mb-10">
-                    <div className="flex items-center gap-3 px-6 py-2.5 cyber-panel border-accent-primary/20 bg-background/50">
-                        <span className="relative flex h-2 w-2">
-                            <span className="relative inline-flex h-2 w-2 bg-accent-primary"></span>
-                        </span>
-                        <h2 className="text-accent-primary font-mono text-sm tracking-widest uppercase">
-                            Operational_Core // v4.0
-                        </h2>
-                    </div>
-                </div>
-                
-                <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-10 tracking-tighter leading-[1.1] text-balance text-white transform-gpu uppercase font-mono">
-                    Forging <br className="hidden md:block"/>
-                    <span className="text-foreground">Digital Resilience</span><span className="text-accent-primary">_</span>
-                </h1>
-                
-                <p className="text-lg md:text-2xl text-dim-primary mb-14 max-w-2xl mx-auto font-light leading-relaxed text-balance">
-                    At <span className="text-foreground tracking-tight font-medium">Mumo Syntax & Capital</span>, we architect high-frequency algorithms and resilient web systems. 
-                    Specialized in <span className="text-foreground/90 font-medium">Distributed Systems</span> and <span className="text-foreground/90 font-medium">Intelligent Analytics</span>.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <Link
-                        href="#contact"
-                        className="cyber-panel px-12 py-5 bg-accent-primary/10 text-accent-primary font-black uppercase tracking-widest hover:bg-accent-primary hover:text-black transition-all w-full sm:w-auto text-center relative z-10"
-                    >
-                        [ Initialize Contact ]
-                    </Link>
-                    <Link
-                        href="#work"
-                        className="cyber-panel px-10 py-5 bg-background text-foreground/80 font-mono tracking-widest uppercase hover:text-accent-primary transition-all duration-300 w-full sm:w-auto text-center"
-                    >
-                        &gt; Execute Portfolio
-                    </Link>
-                </div>
-            </div>
-
-            {/* Hero Scroll Indicator (Absolute to Hero) */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 2, duration: 1 }}
-                className="absolute bottom-12 right-12 z-30 flex flex-col items-center gap-8 hidden lg:flex opacity-30"
-            >
-                <span className="text-[10px] uppercase tracking-[0.6em] text-white/50 font-black [writing-mode:vertical-lr] rotate-180">Scroll</span>
-                <div className="w-[1px] h-20 bg-gradient-to-b from-white/30 via-white/10 to-transparent rounded-full relative overflow-hidden">
-                    <motion.div 
-                        animate={{ y: ["-100%", "100%"] }}
-                        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                        className="absolute inset-0 bg-gradient-to-b from-transparent via-white to-transparent h-1/2"
-                    />
-                </div>
-            </motion.div>
-        </section>
-    );
+      {/* Blueprint Decoration Overlay (from Stitch) */}
+      <div className="absolute right-0 bottom-0 w-1/3 h-1/2 blueprint-bg opacity-20 pointer-events-none border-l border-t border-outline-variant/20"></div>
+    </section>
+  );
 }
-
-

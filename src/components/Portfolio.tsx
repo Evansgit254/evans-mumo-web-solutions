@@ -1,119 +1,86 @@
 "use client";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
+import Image from "next/image";
+
+const cases = [
+  {
+    id: "CASE_01_A",
+    title: "ALGORITHM EQUITY",
+    desc: "Quantifying risk through recursive architectural validation and high-frequency trading logic.",
+    tags: ["React", "FastAPI", "Quant"],
+    image: "/images/trading-expert.png",
+  },
+  {
+    id: "CASE_02_S",
+    title: "STRUCTURAL SCALE",
+    desc: "Vertical expansion strategies and robust school management systems for academic institutions.",
+    tags: ["Next.js", "TypeScript", "Prisma"],
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "CASE_03_V",
+    title: "RESILIENT CORE",
+    desc: "High-performance infrastructure for luxury hospitality and estate management.",
+    tags: ["PostgreSQL", "Cloud", "Security"],
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "CASE_04_P",
+    title: "PORTAL PROTOCOL",
+    desc: "Decentralized marketplace architecture for global non-profit networks.",
+    tags: ["Blockchain", "Next.js", "Scale"],
+    image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
+  },
+];
 
 export default function Portfolio() {
-    const projects = [
+  return (
+    <section id="portfolio" className="py-24 bg-surface-container-lowest border-y border-outline-variant/20">
+      <div className="px-5 md:px-16">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+          <div>
+            <span className="text-syntax-mono text-primary-fixed uppercase tracking-widest block mb-4">SHOWCASE</span>
+            <h2 className="text-headline-lg uppercase">PORTAL_LOGS</h2>
+          </div>
+          <div className="text-syntax-mono text-on-surface-variant max-w-sm border-l-2 border-primary-fixed pl-6 py-2">
+            &quot;We do not build for the present; we engineer for the impending scale.&quot;
+          </div>
+        </div>
 
-        {
-            title: "TradingExpert System",
-            category: "Algorithmic Trading Platform",
-            tags: ["React", "FastAPI", "PostgreSQL"],
-            image: "/images/trading-expert.png",
-            slug: "trading-expert",
-            external: false,
-            type: "quant"
-        },
-        {
-            title: "School Management System",
-            category: "Next.js Dashboard",
-            tags: ["Next.js", "TypeScript", "Prisma"],
-            image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            slug: "school-management-system",
-            external: false,
-            type: "product"
-        },
-        {
-            title: "Parkside Villa",
-            category: "Hotel Booking System",
-            tags: ["Next.js", "React", "PostgreSQL"],
-            image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-            slug: "parkside-villa",
-            external: false,
-            type: "product"
-        },
-        {
-            title: "NRDC Kenya",
-            category: "NGO Web Platform",
-            tags: ["Next.js", "TypeScript", "Tailwind"],
-            image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=800&q=80",
-            slug: "nrdc-project",
-            external: false,
-            type: "product"
-        }
-    ];
-
-    return (
-        <section id="work" className="py-32 bg-background relative overflow-hidden border-b border-white/5 bg-blueprint">
-            <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
-            
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-primary/10 text-accent-primary mb-6 text-sm font-medium border border-accent-primary/20">
-                            Featured Work
-                        </div>
-                        <h3 className="text-5xl md:text-6xl font-black tracking-tight">Selected <span className="text-gradient">Projects</span></h3>
-                    </motion.div>
-                    <motion.p 
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="max-w-md text-foreground/60 text-lg font-light leading-relaxed text-balance"
-                    >
-                        A showcase of resilient digital products and premium engineering solutions.
-                    </motion.p>
+        {/* Case Studies Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {cases.map((cs) => (
+            <motion.div
+              key={cs.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="group cursor-pointer"
+            >
+              <div className="relative aspect-[16/9] mb-6 overflow-hidden border border-outline-variant/30">
+                <Image
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                  alt={cs.title}
+                  src={cs.image}
+                  fill
+                />
+                <div className="absolute top-4 right-4 bg-surface/90 px-3 py-1 text-syntax-label border border-outline-variant">
+                  {cs.id}
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    {projects.map((project, idx) => (
-                        <motion.div
-                            key={idx}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: idx * 0.1 }}
-                            whileHover={{ y: -8 }}
-                            className="group relative"
-                        >
-                            <div className={`relative aspect-[16/10] overflow-hidden cyber-panel rounded-none shadow-2xl ${project.type === "product" ? "border-accent-primary/20" : "border-accent-secondary/20"}`}>
-                                <motion.img
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                                    src={project.image}
-                                    alt={project.title}
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-700"></div>
-                                
-                                <div className="absolute inset-x-0 bottom-0 p-10 translate-y-4 group-hover:translate-y-0 transition-all duration-500 opacity-0 group-hover:opacity-100 flex justify-between items-end">
-                                    <div className="flex flex-col gap-2">
-                                        <p className={`${project.type === "product" ? "text-accent-primary" : "text-white/40"} text-[10px] font-black uppercase tracking-[0.3em] mb-1`}>{project.category}</p>
-                                        <h4 className="text-3xl font-black text-white tracking-tighter">{project.title}</h4>
-                                    </div>
-                                    <Link 
-                                        href={`/projects/${project.slug}`} 
-                                        className={`px-6 py-2.5 rounded-none bg-white text-black text-xs font-black uppercase tracking-widest ${project.type === "product" ? "hover:bg-accent-primary" : "hover:bg-accent-secondary"} transition-all`}
-                                    >
-                                        View Case Study
-                                    </Link>
-                                </div>
-                            </div>
-                            
-                            <div className="mt-8 px-4 flex flex-wrap gap-2">
-                                {project.tags.map(tag => (
-                                    <span key={tag} className={`text-[10px] px-3 py-1 rounded-none border ${project.type === "product" ? "border-accent-primary/20 bg-accent-primary/5 text-dim-primary" : "border-accent-secondary/20 bg-accent-secondary/5 text-dim-secondary"} font-mono`}>{tag}</span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
+              </div>
+              <h3 className="text-strategy-md uppercase mb-2 group-hover:text-primary transition-colors">{cs.title}</h3>
+              <p className="text-body-sm text-on-surface-variant mb-4">{cs.desc}</p>
+              <div className="flex gap-3">
+                {cs.tags.map((tag) => (
+                  <span key={tag} className="bg-surface-variant px-2 py-1 text-syntax-label text-[10px] uppercase">{tag}</span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
-

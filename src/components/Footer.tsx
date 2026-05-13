@@ -4,29 +4,45 @@ import Link from "next/link";
 import Logo from "./Logo";
 
 export default function Footer() {
-    return (
-        <footer className="py-20 border-t border-white/10 bg-background relative overflow-hidden">
-            <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
-            <div className="container mx-auto px-6 flex flex-col items-center relative z-10">
-                <Link href="/" className="mb-12 group">
-                    <Logo className="transition-transform group-hover:scale-105 duration-500 origin-center" />
-                </Link>
-                <nav className="flex flex-wrap justify-center gap-x-8 gap-y-6 mb-16 text-sm font-medium text-foreground/60">
-                    <Link href="/#services" className="hover:text-foreground transition-colors">Services</Link>
-                    <Link href="/#work" className="hover:text-foreground transition-colors">Work</Link>
-                    <Link href="/blog" className="hover:text-foreground transition-colors">Blog</Link>
-                    <Link href="/#contact" className="hover:text-foreground transition-colors">Contact</Link>
-                    <a href="https://github.com/Evansgit254" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">GitHub</a>
-                    <a href="https://www.linkedin.com/in/evans-mumo-5b0759261" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">LinkedIn</a>
-                </nav>
-                <div className="text-center text-foreground/50 text-xs border-t border-white/5 pt-8 w-full max-w-2xl font-medium">
-                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p>&copy; {new Date().getFullYear()} Mumo Syntax & Capital.</p>
-                        <h4 className="text-2xl font-black tracking-tighter text-white mb-4 uppercase font-mono">MUMO<span className="text-accent-primary">SYNTAX</span></h4>
-                        <p className="text-foreground/40 text-xs font-mono tracking-widest leading-relaxed uppercase">&amp; Capital Engineering</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+  return (
+    <footer className="py-20 bg-background border-t border-primary/10 grid-blueprint">
+      <div className="container-max px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
+          <div className="md:col-span-2 space-y-8">
+            <Logo />
+            <p className="max-w-xs text-secondary text-base font-light leading-relaxed">
+              An elite engineering studio synthesizing technical mastery into industrial capital assets.
+            </p>
+          </div>
+          
+          <div className="space-y-6">
+            <span className="text-label text-primary">Capabilities</span>
+            <ul className="space-y-4 text-secondary text-sm font-light">
+              <li><Link href="#" className="hover:text-primary transition-colors">Software Engineering</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">SecOps Protocol</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Market Intelligence</Link></li>
+            </ul>
+          </div>
+
+          <div className="space-y-6">
+            <span className="text-label text-primary">Origin</span>
+            <ul className="space-y-4 text-secondary text-sm font-light">
+              <li><Link href="#" className="hover:text-primary transition-colors">GitHub</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">LinkedIn</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Twitter</Link></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pt-10 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-[10px] font-mono text-secondary uppercase tracking-widest">
+            © 2026 MUMO_SYNTAX_CAPITAL_FRAMEWORK // ALL_SYSTEM_RESOURCES_RESERVED
+          </p>
+          <div className="text-[10px] font-mono text-primary/40 uppercase tracking-widest">
+            SYNTAX: STABLE // CAPITAL: NOMINAL
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 }

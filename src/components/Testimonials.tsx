@@ -3,79 +3,54 @@
 import { motion } from "framer-motion";
 
 const testimonials = [
-    {
-        name: "Dr. Kamau",
-        role: "Head of ICT, Academic Institution",
-        content: "Evans delivered a robust school management system that transformed our administrative workflows. His technical depth in Next.js and secure architecture is exceptional.",
-        avatar: "👨‍🏫"
-    },
-    {
-        name: "Security Lead",
-        role: "FinTech Startup",
-        content: "Working with Evans on our system audit was a game-changer. He doesn't just find vulnerabilities; he provides scalable, secure engineering solutions.",
-        avatar: "🛡️"
-    },
-    {
-        name: "Project Manager",
-        role: "Global Non-Profit",
-        content: "The NRDC marketplace platform exceeded our expectations for speed and reliability. Evans is a reliable engineer who understands both business logic and complex code.",
-        avatar: "🌍"
-    }
+  {
+    name: "Dr. Kamau",
+    role: "Head of ICT, Academic Institution",
+    content: "Evans delivered a robust school management system that transformed our administrative workflows. His technical depth in Next.js and secure architecture is exceptional.",
+  },
+  {
+    name: "Security Lead",
+    role: "FinTech Startup",
+    content: "Working with Evans on our system audit was a game-changer. He provides scalable, secure engineering solutions beyond just finding vulnerabilities.",
+  },
+  {
+    name: "Project Manager",
+    role: "Global Non-Profit",
+    content: "The NRDC marketplace platform exceeded our expectations for speed and reliability. Evans is a reliable engineer who understands both business logic and complex code.",
+  },
 ];
 
 export default function Testimonials() {
-    return (
-        <section className="py-32 bg-background relative overflow-hidden">
-            <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[800px] h-[800px] bg-accent-secondary/5 blur-[160px] rounded-full pointer-events-none"></div>
-            
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-24">
-                    <motion.h2 
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-accent-secondary font-mono tracking-[0.4em] uppercase mb-4 text-xs"
-                    >
-                        Success Stories
-                    </motion.h2>
-                    <motion.h3 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-black tracking-tighter"
-                    >
-                        Engineered for <span className="text-gradient glow-secondary">Confidence</span>
-                    </motion.h3>
-                </div>
+  return (
+    <section className="px-5 md:px-16 py-24 border-b border-outline-variant/20">
+      <div className="mb-16">
+        <span className="text-syntax-mono text-primary-fixed uppercase tracking-widest block mb-4">VALIDATION</span>
+        <h2 className="text-headline-lg uppercase">SIGNAL_REPORTS</h2>
+      </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {testimonials.map((t, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.15 }}
-                            whileHover={{ y: -8 }}
-                            className="p-10 rounded-none cyber-panel rounded-none flex flex-col justify-between h-full group"
-                        >
-                            <div>
-                                <div className="text-5xl mb-10 grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-110 inline-block">
-                                    {t.avatar}
-                                </div>
-                                <p className="text-foreground/60 text-lg font-light italic mb-10 leading-relaxed group-hover:text-foreground/80 transition-colors">
-                                    "{t.content}"
-                                </p>
-                            </div>
-                            <div className="pt-8 border-t border-white/5">
-                                <h4 className="font-bold text-xl mb-1">{t.name}</h4>
-                                <p className="text-accent-secondary font-mono text-[10px] uppercase font-black tracking-widest">{t.role}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {testimonials.map((t, i) => (
+          <motion.div
+            key={t.name}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1 }}
+            className="glass-panel p-8 flex flex-col justify-between min-h-[300px] group hover:border-primary/30 transition-colors"
+          >
+            <div>
+              <span className="text-syntax-label text-primary/40 block mb-8">SIG_0{i + 1}</span>
+              <p className="text-body-lg text-on-surface-variant italic leading-relaxed mb-8">
+                &quot;{t.content}&quot;
+              </p>
             </div>
-        </section>
-    );
+            <div className="pt-6 border-t border-outline-variant/20">
+              <h4 className="font-bold text-lg uppercase tracking-tight text-on-surface">{t.name}</h4>
+              <p className="text-syntax-label text-on-surface-variant uppercase">{t.role}</p>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
 }
-

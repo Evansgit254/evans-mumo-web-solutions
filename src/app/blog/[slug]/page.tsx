@@ -43,7 +43,7 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
         content: (
             <div className="space-y-10">
                 <p className="text-xl font-light leading-relaxed text-foreground/70 italic border-l-4 border-accent-secondary pl-8 py-2">
-                    Building a trading bot isn't just about the strategy—it's about the resilience of the pipeline. In my V6.1 "Liquid Shield" system, I focused on stability.
+                    Building a trading bot isn&apos;t just about the strategy—it&apos;s about the resilience of the pipeline. In my V6.1 &quot;Liquid Shield&quot; system, I focused on stability.
                 </p>
                 <div className="space-y-6">
                     <h3 className="text-3xl font-black tracking-tight">Strategy Isolation</h3>
@@ -67,18 +67,18 @@ const blogPosts: Record<string, { title: string; category: string; date: string;
         content: (
             <div className="space-y-10">
                 <p className="text-xl font-light leading-relaxed text-foreground/70 italic border-l-4 border-accent-primary pl-8 py-2">
-                    AI is no longer just a buzzword; it's a fundamental shift in how we build user experiences. From predictive modeling to LLM integrations, the possibilities are vast.
+                    AI is no longer just a buzzword; it&apos;s a fundamental shift in how we build user experiences. From predictive modeling to LLM integrations, the possibilities are vast.
                 </p>
                 <div className="space-y-6">
                     <h3 className="text-3xl font-black tracking-tight">Predictive User Interfaces</h3>
                     <p className="text-lg font-light text-foreground/60 leading-relaxed">
-                        Imagine an interface that anticipates a user's next action based on historical data. As a Data Scientist, I leverage behavioral patterns to optimize UI components for higher conversion.
+                        Imagine an interface that anticipates a user&apos;s next action based on historical data. As a Data Scientist, I leverage behavioral patterns to optimize UI components for higher conversion.
                     </p>
                 </div>
                 <div className="space-y-6">
                     <h3 className="text-3xl font-black tracking-tight">LLM Orchestration</h3>
                     <p className="text-lg font-light text-foreground/60 leading-relaxed">
-                        Integrating large language models requires careful prompt engineering and secure API handling. Building "agentic" features into web apps is the next frontier of software engineering.
+                        Integrating large language models requires careful prompt engineering and secure API handling. Building &quot;agentic&quot; features into web apps is the next frontier of software engineering.
                     </p>
                 </div>
             </div>
@@ -149,7 +149,7 @@ export default function BlogPost({ params }: { params: Promise<{ slug: string }>
                     <div className="absolute top-0 right-0 w-64 h-64 bg-accent-primary/10 blur-[80px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
                     <div className="relative z-10">
                         <h4 className="text-3xl font-black mb-4 tracking-tight">Have a project in mind?</h4>
-                        <p className="text-foreground/60 text-lg font-light mb-10 max-w-md mx-auto">Let's collaborate on building something secure and scalable.</p>
+                        <p className="text-foreground/60 text-lg font-light mb-10 max-w-md mx-auto">Let&apos;s collaborate on building something secure and scalable.</p>
                         <Link href="/#contact" className="inline-block px-10 py-5 rounded-full bg-white text-black font-bold transition-all shadow-lg hover:shadow-[0_0_30px_rgba(255,255,255,0.3)] hover:-translate-y-1">Get in Touch</Link>
                     </div>
                 </motion.div>
