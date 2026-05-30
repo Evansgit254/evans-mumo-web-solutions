@@ -22,10 +22,10 @@ const cases = [
   },
   {
     id: "CASE_03_V",
-    title: "RESILIENT CORE",
-    desc: "High-performance infrastructure for luxury hospitality and estate management.",
-    tags: ["PostgreSQL", "Cloud", "Security"],
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    title: "LUXURY HOSPITALITY",
+    desc: "Precision digital orchestration and high-performance infrastructure for elite hospitality and estate management.",
+    tags: ["PostgreSQL", "Next.js", "Security"],
+    image: "/images/parkside-villa.png",
     href: "https://www.parksidevillakitui.com/",
   },
   {
